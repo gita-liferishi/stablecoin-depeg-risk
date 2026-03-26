@@ -1,0 +1,23 @@
+data:
+  stablecoins:
+    - id: tether
+      symbol: USDT
+    - id: usd-coin
+      symbol: USDC
+    - id: dai
+      symbol: DAI
+    - id: frax
+      symbol: FRAX
+    - id: terrausd
+      symbol: UST
+      active_until: "2022-05-15"
+ 
+  reference_assets:
+    - id: bitcoin
+      symbol: BTC
+    - id: ethereum
+      symbol: ETH
+ 
+  date_range:
+    start: "2020-01-01"
+    end: "2025-12-31"

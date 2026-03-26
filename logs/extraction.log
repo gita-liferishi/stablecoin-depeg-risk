@@ -1,0 +1,500 @@
+2026-03-25 20:07:07.654 | INFO     | __main__:main:64 - ============================================================
+2026-03-25 20:07:07.656 | INFO     | __main__:main:65 - Starting data extraction
+2026-03-25 20:07:07.656 | INFO     | __main__:main:66 - ============================================================
+2026-03-25 20:13:36.964 | INFO     | __main__:main:65 - ============================================================
+2026-03-25 20:13:36.965 | INFO     | __main__:main:66 - Starting data extraction
+2026-03-25 20:13:36.965 | INFO     | __main__:main:67 - ============================================================
+2026-03-25 20:13:36.967 | INFO     | __main__:main:78 - Date range: 2020-01-01 to 2026-03-25
+2026-03-25 20:13:36.970 | INFO     | src._get.extractors:__init__:46 - Initialized CoinGecko client (API key: No)
+2026-03-25 20:13:36.970 | INFO     | src._get.extractors:__init__:229 - Initialized DefiLlama client
+2026-03-25 20:13:36.971 | INFO     | src._get.extractors:__init__:429 - Initialized DataExtractor
+2026-03-25 20:13:36.971 | INFO     | src._get.extractors:run_full_extraction:660 - ============================================================
+2026-03-25 20:13:36.972 | INFO     | src._get.extractors:run_full_extraction:661 - Starting MVP Data Extraction
+2026-03-25 20:13:36.972 | INFO     | src._get.extractors:run_full_extraction:662 - ============================================================
+2026-03-25 20:13:36.972 | INFO     | src._get.extractors:run_full_extraction:667 - 
+[1/5] Extracting price data...
+2026-03-25 20:13:36.973 | INFO     | src._get.extractors:extract_price_data:454 - Fetching USDT (tether) from 2020-01-01 to 2025-12-31
+2026-03-25 20:13:36.973 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for tether
+2026-03-25 20:13:37.572 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/tether/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:13:37.574 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ USDT failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/tether/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:13:37.575 | INFO     | src._get.extractors:extract_price_data:454 - Fetching USDC (usd-coin) from 2020-01-01 to 2025-12-31
+2026-03-25 20:13:37.576 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for usd-coin
+2026-03-25 20:13:37.638 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/usd-coin/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:13:37.639 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ USDC failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/usd-coin/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:13:37.640 | INFO     | src._get.extractors:extract_price_data:454 - Fetching DAI (dai) from 2020-01-01 to 2025-12-31
+2026-03-25 20:13:37.641 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for dai
+2026-03-25 20:13:37.706 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/dai/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:13:37.707 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ DAI failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/dai/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:13:37.708 | INFO     | src._get.extractors:extract_price_data:454 - Fetching FRAX (frax) from 2020-01-01 to 2025-12-31
+2026-03-25 20:13:37.709 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for frax
+2026-03-25 20:13:37.768 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/frax/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:13:37.768 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ FRAX failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/frax/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:13:37.769 | INFO     | src._get.extractors:extract_price_data:454 - Fetching UST (terrausd) from 2020-01-01 to 2022-05-15
+2026-03-25 20:13:37.770 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for terrausd
+2026-03-25 20:13:37.833 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/terrausd/market_chart/range?vs_currency=usd&from=1577854800&to=1652587200
+2026-03-25 20:13:37.833 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ UST failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/terrausd/market_chart/range?vs_currency=usd&from=1577854800&to=1652587200
+2026-03-25 20:13:37.834 | INFO     | src._get.extractors:extract_price_data:476 - Fetching BTC (bitcoin)
+2026-03-25 20:13:37.835 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for bitcoin
+2026-03-25 20:13:37.873 | WARNING  | src._get.extractors:_make_request:69 - Rate limited, waiting 60 seconds...
+2026-03-25 20:14:37.916 | WARNING  | src._get.extractors:_make_request:69 - Rate limited, waiting 60 seconds...
+2026-03-25 20:20:33.874 | INFO     | __main__:main:65 - ============================================================
+2026-03-25 20:20:33.875 | INFO     | __main__:main:66 - Starting data extraction
+2026-03-25 20:20:33.875 | INFO     | __main__:main:67 - ============================================================
+2026-03-25 20:20:33.877 | INFO     | __main__:main:78 - Date range: 2020-01-01 to 2026-03-25
+2026-03-25 20:20:33.879 | INFO     | src._get.extractors:__init__:46 - Initialized CoinGecko client (API key: Yes)
+2026-03-25 20:20:33.880 | INFO     | src._get.extractors:__init__:229 - Initialized DefiLlama client
+2026-03-25 20:20:33.881 | INFO     | src._get.extractors:__init__:429 - Initialized DataExtractor
+2026-03-25 20:20:33.881 | INFO     | src._get.extractors:run_full_extraction:660 - ============================================================
+2026-03-25 20:20:33.881 | INFO     | src._get.extractors:run_full_extraction:661 - Starting MVP Data Extraction
+2026-03-25 20:20:33.881 | INFO     | src._get.extractors:run_full_extraction:662 - ============================================================
+2026-03-25 20:20:33.882 | INFO     | src._get.extractors:run_full_extraction:667 - 
+[1/5] Extracting price data...
+2026-03-25 20:20:33.882 | INFO     | src._get.extractors:extract_price_data:454 - Fetching USDT (tether) from 2020-01-01 to 2025-12-31
+2026-03-25 20:20:33.883 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for tether
+2026-03-25 20:20:34.424 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/tether/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.425 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ USDT failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/tether/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.426 | INFO     | src._get.extractors:extract_price_data:454 - Fetching USDC (usd-coin) from 2020-01-01 to 2025-12-31
+2026-03-25 20:20:34.427 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for usd-coin
+2026-03-25 20:20:34.513 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/usd-coin/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.514 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ USDC failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/usd-coin/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.515 | INFO     | src._get.extractors:extract_price_data:454 - Fetching DAI (dai) from 2020-01-01 to 2025-12-31
+2026-03-25 20:20:34.516 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for dai
+2026-03-25 20:20:34.592 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/dai/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.594 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ DAI failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/dai/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.594 | INFO     | src._get.extractors:extract_price_data:454 - Fetching FRAX (frax) from 2020-01-01 to 2025-12-31
+2026-03-25 20:20:34.595 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for frax
+2026-03-25 20:20:34.672 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/frax/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.673 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ FRAX failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/frax/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.674 | INFO     | src._get.extractors:extract_price_data:454 - Fetching UST (terrausd) from 2020-01-01 to 2022-05-15
+2026-03-25 20:20:34.674 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for terrausd
+2026-03-25 20:20:34.746 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/terrausd/market_chart/range?vs_currency=usd&from=1577854800&to=1652587200
+2026-03-25 20:20:34.746 | ERROR    | src._get.extractors:extract_price_data:467 -   ✗ UST failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/terrausd/market_chart/range?vs_currency=usd&from=1577854800&to=1652587200
+2026-03-25 20:20:34.747 | INFO     | src._get.extractors:extract_price_data:476 - Fetching BTC (bitcoin)
+2026-03-25 20:20:34.747 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for bitcoin
+2026-03-25 20:20:34.828 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.830 | ERROR    | src._get.extractors:extract_price_data:489 -   ✗ BTC failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.831 | INFO     | src._get.extractors:extract_price_data:476 - Fetching ETH (ethereum)
+2026-03-25 20:20:34.832 | INFO     | src._get.extractors:get_coin_market_chart_range:159 - Fetching market chart range for ethereum
+2026-03-25 20:20:34.911 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.912 | ERROR    | src._get.extractors:extract_price_data:489 -   ✗ ETH failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/ethereum/market_chart/range?vs_currency=usd&from=1577854800&to=1767157200
+2026-03-25 20:20:34.913 | ERROR    | src._get.extractors:run_full_extraction:671 - Price extraction failed: No price data fetched for any asset
+2026-03-25 20:20:34.913 | INFO     | src._get.extractors:run_full_extraction:674 - 
+[2/5] Extracting supply data...
+2026-03-25 20:20:38.300 | INFO     | src._get.extractors:extract_supply_data:536 -   ✓ USDT: 2191 rows
+2026-03-25 20:20:39.733 | INFO     | src._get.extractors:extract_supply_data:536 -   ✓ USDC: 2191 rows
+2026-03-25 20:20:41.359 | INFO     | src._get.extractors:extract_supply_data:536 -   ✓ DAI: 2191 rows
+2026-03-25 20:20:42.523 | INFO     | src._get.extractors:extract_supply_data:536 -   ✓ FRAX: 1833 rows
+2026-03-25 20:20:42.524 | WARNING  | src._get.extractors:extract_supply_data:523 -   ✗ UST not found in DefiLlama
+2026-03-25 20:20:42.528 | ERROR    | src._get.extractors:run_full_extraction:678 - Supply extraction failed: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2026-03-25 20:20:42.528 | INFO     | src._get.extractors:run_full_extraction:681 - 
+[3/5] Extracting Curve 3pool data...
+2026-03-25 20:20:42.528 | INFO     | src._get.extractors:extract_curve_3pool_data:557 - Fetching Curve 3pool data...
+2026-03-25 20:20:42.978 | ERROR    | src._get.extractors:_make_request:238 - Request error: 404 Client Error: Not Found for url: https://api.llama.fi/pools
+2026-03-25 20:20:42.979 | ERROR    | src._get.extractors:extract_curve_3pool_data:586 -   ✗ Curve 3pool extraction failed: 404 Client Error: Not Found for url: https://api.llama.fi/pools
+2026-03-25 20:20:42.981 | INFO     | src._get.extractors:run_full_extraction:688 - 
+[4/5] Extracting liquidity pool data...
+2026-03-25 20:20:42.982 | INFO     | src._get.extractors:extract_pool_data:596 - Fetching liquidity pool data...
+2026-03-25 20:20:43.025 | ERROR    | src._get.extractors:_make_request:238 - Request error: 404 Client Error: Not Found for url: https://api.llama.fi/pools
+2026-03-25 20:20:43.027 | ERROR    | src._get.extractors:run_full_extraction:692 - Pool extraction failed: 404 Client Error: Not Found for url: https://api.llama.fi/pools
+2026-03-25 20:20:43.028 | INFO     | src._get.extractors:run_full_extraction:695 - 
+[5/5] Setting up macro data...
+2026-03-25 20:20:43.029 | INFO     | src._get.extractors:extract_macro_data:626 - Fetching macro indicators...
+2026-03-25 20:20:43.043 | ERROR    | src._get.extractors:run_full_extraction:699 - Macro extraction failed: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2026-03-25 20:20:43.044 | INFO     | src._get.extractors:run_full_extraction:702 - 
+============================================================
+2026-03-25 20:20:43.044 | INFO     | src._get.extractors:run_full_extraction:703 - Extraction Summary
+2026-03-25 20:20:43.045 | INFO     | src._get.extractors:run_full_extraction:704 - ============================================================
+2026-03-25 20:20:43.046 | WARNING  | src._get.extractors:run_full_extraction:713 -   curve_3pool: No data
+2026-03-25 20:20:43.046 | INFO     | src._get.extractors:run_full_extraction:715 - 
+Total: 0 rows
+2026-03-25 20:20:43.047 | INFO     | src._get.extractors:run_full_extraction:716 - Output directory: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 20:20:43.048 | INFO     | __main__:main:90 - 
+============================================================
+2026-03-25 20:20:43.048 | INFO     | __main__:main:91 - Extraction Summary
+2026-03-25 20:20:43.049 | INFO     | __main__:main:92 - ============================================================
+2026-03-25 20:20:43.049 | WARNING  | __main__:main:101 -   curve_3pool: No data extracted
+2026-03-25 20:20:43.050 | INFO     | __main__:main:103 - 
+Extraction complete!
+2026-03-25 20:29:38.151 | INFO     | __main__:main:65 - ============================================================
+2026-03-25 20:29:38.151 | INFO     | __main__:main:66 - Starting data extraction
+2026-03-25 20:29:38.152 | INFO     | __main__:main:67 - ============================================================
+2026-03-25 20:29:38.153 | INFO     | __main__:main:78 - Date range: 2020-01-01 to 2026-03-25
+2026-03-25 20:29:38.155 | INFO     | src._get.extractors:__init__:46 - Initialized CoinGecko client (API key: Yes)
+2026-03-25 20:29:38.156 | INFO     | src._get.extractors:__init__:230 - Initialized DefiLlama client
+2026-03-25 20:29:38.156 | INFO     | src._get.extractors:__init__:430 - Initialized DataExtractor
+2026-03-25 20:29:38.156 | INFO     | src._get.extractors:run_full_extraction:653 - ============================================================
+2026-03-25 20:29:38.156 | INFO     | src._get.extractors:run_full_extraction:654 - Starting MVP Data Extraction
+2026-03-25 20:29:38.156 | INFO     | src._get.extractors:run_full_extraction:655 - ============================================================
+2026-03-25 20:29:38.157 | INFO     | src._get.extractors:run_full_extraction:660 - 
+[1/5] Extracting price data...
+2026-03-25 20:29:38.157 | INFO     | src._get.extractors:extract_price_data:452 - Fetching USDT (tether)
+2026-03-25 20:29:38.157 | INFO     | src._get.extractors:get_coin_market_chart:114 - Fetching market chart for tether (max days)
+2026-03-25 20:29:38.782 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/tether/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:38.783 | ERROR    | src._get.extractors:extract_price_data:463 -   ✗ USDT failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/tether/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:38.783 | INFO     | src._get.extractors:extract_price_data:452 - Fetching USDC (usd-coin)
+2026-03-25 20:29:38.784 | INFO     | src._get.extractors:get_coin_market_chart:114 - Fetching market chart for usd-coin (max days)
+2026-03-25 20:29:38.887 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/usd-coin/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:38.887 | ERROR    | src._get.extractors:extract_price_data:463 -   ✗ USDC failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/usd-coin/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:38.888 | INFO     | src._get.extractors:extract_price_data:452 - Fetching DAI (dai)
+2026-03-25 20:29:38.888 | INFO     | src._get.extractors:get_coin_market_chart:114 - Fetching market chart for dai (max days)
+2026-03-25 20:29:38.963 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/dai/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:38.964 | ERROR    | src._get.extractors:extract_price_data:463 -   ✗ DAI failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/dai/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:38.965 | INFO     | src._get.extractors:extract_price_data:452 - Fetching FRAX (frax)
+2026-03-25 20:29:38.966 | INFO     | src._get.extractors:get_coin_market_chart:114 - Fetching market chart for frax (max days)
+2026-03-25 20:29:39.060 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/frax/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:39.061 | ERROR    | src._get.extractors:extract_price_data:463 -   ✗ FRAX failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/frax/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:39.062 | INFO     | src._get.extractors:extract_price_data:452 - Fetching UST (terrausd)
+2026-03-25 20:29:39.062 | INFO     | src._get.extractors:get_coin_market_chart:114 - Fetching market chart for terrausd (max days)
+2026-03-25 20:29:39.159 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/terrausd/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:39.160 | ERROR    | src._get.extractors:extract_price_data:463 -   ✗ UST failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/terrausd/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:39.161 | INFO     | src._get.extractors:extract_price_data:472 - Fetching BTC (bitcoin)
+2026-03-25 20:29:39.162 | INFO     | src._get.extractors:get_coin_market_chart:114 - Fetching market chart for bitcoin (max days)
+2026-03-25 20:29:39.246 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:39.247 | ERROR    | src._get.extractors:extract_price_data:483 -   ✗ BTC failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:39.247 | INFO     | src._get.extractors:extract_price_data:472 - Fetching ETH (ethereum)
+2026-03-25 20:29:39.248 | INFO     | src._get.extractors:get_coin_market_chart:114 - Fetching market chart for ethereum (max days)
+2026-03-25 20:29:39.319 | ERROR    | src._get.extractors:_make_request:72 - HTTP error: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:39.320 | ERROR    | src._get.extractors:extract_price_data:483 -   ✗ ETH failed: 401 Client Error: Unauthorized for url: https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=max&interval=daily
+2026-03-25 20:29:39.321 | ERROR    | src._get.extractors:run_full_extraction:664 - Price extraction failed: No price data fetched for any asset
+2026-03-25 20:29:39.322 | INFO     | src._get.extractors:run_full_extraction:667 - 
+[2/5] Extracting supply data...
+2026-03-25 20:29:41.253 | INFO     | src._get.extractors:extract_supply_data:529 -   ✓ USDT: 2191 rows
+2026-03-25 20:29:42.517 | INFO     | src._get.extractors:extract_supply_data:529 -   ✓ USDC: 2191 rows
+2026-03-25 20:29:43.041 | INFO     | src._get.extractors:extract_supply_data:529 -   ✓ DAI: 2191 rows
+2026-03-25 20:29:43.251 | INFO     | src._get.extractors:extract_supply_data:529 -   ✓ FRAX: 1833 rows
+2026-03-25 20:29:43.253 | WARNING  | src._get.extractors:extract_supply_data:516 -   ✗ UST not found in DefiLlama
+2026-03-25 20:29:43.366 | INFO     | src._get.extractors:extract_supply_data:537 - Saved supply data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\supply_raw.parquet
+2026-03-25 20:29:43.367 | INFO     | src._get.extractors:run_full_extraction:674 - 
+[3/5] Extracting Curve 3pool data...
+2026-03-25 20:29:43.367 | INFO     | src._get.extractors:extract_curve_3pool_data:550 - Fetching Curve 3pool data...
+2026-03-25 20:29:44.758 | WARNING  | src._get.extractors:extract_curve_3pool_data:575 -   ✗ No Curve 3pool data found
+2026-03-25 20:29:44.759 | INFO     | src._get.extractors:run_full_extraction:681 - 
+[4/5] Extracting liquidity pool data...
+2026-03-25 20:29:44.760 | INFO     | src._get.extractors:extract_pool_data:589 - Fetching liquidity pool data...
+2026-03-25 20:29:45.794 | INFO     | src._get.extractors:extract_pool_data:607 -   ✓ Pools: 5728 stablecoin pools
+2026-03-25 20:29:45.795 | INFO     | src._get.extractors:run_full_extraction:688 - 
+[5/5] Setting up macro data...
+2026-03-25 20:29:45.795 | INFO     | src._get.extractors:extract_macro_data:619 - Fetching macro indicators...
+2026-03-25 20:29:45.809 | INFO     | src._get.extractors:extract_macro_data:635 -   ✓ Macro: placeholder created (2192 rows)
+2026-03-25 20:29:45.809 | INFO     | src._get.extractors:extract_macro_data:636 -     Note: Populate with FRED/Yahoo data for full analysis
+2026-03-25 20:29:45.809 | INFO     | src._get.extractors:run_full_extraction:695 - 
+============================================================
+2026-03-25 20:29:45.809 | INFO     | src._get.extractors:run_full_extraction:696 - Extraction Summary
+2026-03-25 20:29:45.809 | INFO     | src._get.extractors:run_full_extraction:697 - ============================================================
+2026-03-25 20:29:45.810 | INFO     | src._get.extractors:run_full_extraction:704 -   supply: 8,406 rows
+2026-03-25 20:29:45.810 | WARNING  | src._get.extractors:run_full_extraction:706 -   curve_3pool: No data
+2026-03-25 20:29:45.810 | INFO     | src._get.extractors:run_full_extraction:704 -   pools: 5,728 rows
+2026-03-25 20:29:45.810 | INFO     | src._get.extractors:run_full_extraction:704 -   macro: 2,192 rows
+2026-03-25 20:29:45.810 | INFO     | src._get.extractors:run_full_extraction:708 - 
+Total: 16,326 rows
+2026-03-25 20:29:45.811 | INFO     | src._get.extractors:run_full_extraction:709 - Output directory: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 20:29:45.811 | INFO     | __main__:main:90 - 
+============================================================
+2026-03-25 20:29:45.811 | INFO     | __main__:main:91 - Extraction Summary
+2026-03-25 20:29:45.811 | INFO     | __main__:main:92 - ============================================================
+2026-03-25 20:29:45.811 | INFO     | __main__:main:96 -   supply: 8406 rows, 2 columns
+2026-03-25 20:29:45.815 | ERROR    | __main__:main:107 - Extraction failed: [Errno 13] Permission denied: 'data/'
+2026-03-25 22:41:27.471 | INFO     | __main__:main:65 - ============================================================
+2026-03-25 22:41:27.473 | INFO     | __main__:main:66 - Starting data extraction
+2026-03-25 22:41:27.473 | INFO     | __main__:main:67 - ============================================================
+2026-03-25 22:41:27.506 | INFO     | __main__:main:78 - Date range: 2020-01-01 to 2026-03-25
+2026-03-25 22:41:27.509 | INFO     | src._get.extractors:__init__:41 - Initialized Binance client (no auth needed)
+2026-03-25 22:41:27.510 | INFO     | src._get.extractors:__init__:192 - Initialized DefiLlama client
+2026-03-25 22:41:27.513 | INFO     | src._get.extractors:__init__:344 - Initialized DataExtractor
+2026-03-25 22:41:27.514 | INFO     | src._get.extractors:run_full_extraction:612 - ============================================================
+2026-03-25 22:41:27.515 | INFO     | src._get.extractors:run_full_extraction:613 - Starting MVP Data Extraction
+2026-03-25 22:41:27.516 | INFO     | src._get.extractors:run_full_extraction:614 - ============================================================
+2026-03-25 22:41:27.517 | ERROR    | __main__:main:107 - Extraction failed: string indices must be integers, not 'str'
+2026-03-25 22:46:15.643 | INFO     | __main__:main:65 - ============================================================
+2026-03-25 22:46:15.643 | INFO     | __main__:main:66 - Starting data extraction
+2026-03-25 22:46:15.644 | INFO     | __main__:main:67 - ============================================================
+2026-03-25 22:46:15.648 | INFO     | __main__:main:78 - Date range: 2020-01-01 to 2026-03-25
+2026-03-25 22:46:15.651 | INFO     | src._get.extractors:__init__:41 - Initialized Binance client (no auth needed)
+2026-03-25 22:46:15.652 | INFO     | src._get.extractors:__init__:192 - Initialized DefiLlama client
+2026-03-25 22:46:15.654 | INFO     | src._get.extractors:__init__:362 - Initialized DataExtractor
+2026-03-25 22:46:15.654 | INFO     | src._get.extractors:run_full_extraction:630 - ============================================================
+2026-03-25 22:46:15.655 | INFO     | src._get.extractors:run_full_extraction:631 - Starting MVP Data Extraction
+2026-03-25 22:46:15.655 | INFO     | src._get.extractors:run_full_extraction:632 - ============================================================
+2026-03-25 22:46:15.655 | INFO     | src._get.extractors:run_full_extraction:633 - Date range: 2020-01-01 to 2025-12-31
+2026-03-25 22:46:15.655 | INFO     | src._get.extractors:run_full_extraction:634 - Output directory: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 22:46:15.656 | INFO     | src._get.extractors:run_full_extraction:639 - 
+[1/3] Extracting price data...
+2026-03-25 22:46:15.656 | INFO     | src._get.extractors:extract_price_data:461 - Creating USDT price series (quote currency = $1.00)
+2026-03-25 22:46:15.667 | INFO     | src._get.extractors:extract_price_data:473 -   ✓ USDT: 2192 rows (assumed $1.00)
+2026-03-25 22:46:15.668 | INFO     | src._get.extractors:get_klines:82 - Fetching USDCUSDT from 2020-01-01 to 2025-12-31
+2026-03-25 22:46:16.363 | ERROR    | src._get.extractors:_make_request:52 - Binance request error: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=USDCUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.364 | ERROR    | src._get.extractors:get_klines:109 - Error fetching USDCUSDT: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=USDCUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.365 | WARNING  | src._get.extractors:get_klines:113 - No data returned for USDCUSDT
+2026-03-25 22:46:16.370 | INFO     | src._get.extractors:get_klines:82 - Fetching DAIUSDT from 2020-01-01 to 2025-12-31
+2026-03-25 22:46:16.429 | ERROR    | src._get.extractors:_make_request:52 - Binance request error: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=DAIUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.430 | ERROR    | src._get.extractors:get_klines:109 - Error fetching DAIUSDT: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=DAIUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.432 | WARNING  | src._get.extractors:get_klines:113 - No data returned for DAIUSDT
+2026-03-25 22:46:16.434 | INFO     | src._get.extractors:get_klines:82 - Fetching FRAXUSDT from 2020-01-01 to 2025-12-31
+2026-03-25 22:46:16.476 | ERROR    | src._get.extractors:_make_request:52 - Binance request error: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=FRAXUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.477 | ERROR    | src._get.extractors:get_klines:109 - Error fetching FRAXUSDT: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=FRAXUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.478 | WARNING  | src._get.extractors:get_klines:113 - No data returned for FRAXUSDT
+2026-03-25 22:46:16.481 | INFO     | src._get.extractors:get_klines:82 - Fetching TUSDUSDT from 2020-01-01 to 2025-12-31
+2026-03-25 22:46:16.527 | ERROR    | src._get.extractors:_make_request:52 - Binance request error: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=TUSDUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.528 | ERROR    | src._get.extractors:get_klines:109 - Error fetching TUSDUSDT: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=TUSDUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.528 | WARNING  | src._get.extractors:get_klines:113 - No data returned for TUSDUSDT
+2026-03-25 22:46:16.530 | INFO     | src._get.extractors:get_klines:82 - Fetching BTCUSDT from 2020-01-01 to 2025-12-31
+2026-03-25 22:46:16.569 | ERROR    | src._get.extractors:_make_request:52 - Binance request error: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.570 | ERROR    | src._get.extractors:get_klines:109 - Error fetching BTCUSDT: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.572 | WARNING  | src._get.extractors:get_klines:113 - No data returned for BTCUSDT
+2026-03-25 22:46:16.574 | INFO     | src._get.extractors:get_klines:82 - Fetching ETHUSDT from 2020-01-01 to 2025-12-31
+2026-03-25 22:46:16.611 | ERROR    | src._get.extractors:_make_request:52 - Binance request error: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.612 | ERROR    | src._get.extractors:get_klines:109 - Error fetching ETHUSDT: 451 Client Error:  for url: https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1577854800000&endTime=1767157200000&limit=1000
+2026-03-25 22:46:16.612 | WARNING  | src._get.extractors:get_klines:113 - No data returned for ETHUSDT
+2026-03-25 22:46:16.613 | WARNING  | src._get.extractors:load_ust_from_csv:391 - UST CSV not found. Place it in data/raw/ust_coinmarketcap.csv
+2026-03-25 22:46:17.573 | INFO     | src._get.extractors:extract_price_data:534 - Saved price data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.parquet (2192 total rows)
+2026-03-25 22:46:17.587 | INFO     | src._get.extractors:extract_price_data:539 - Saved CSV copy to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.csv
+2026-03-25 22:46:17.588 | INFO     | src._get.extractors:run_full_extraction:646 - 
+[2/3] Extracting supply data...
+2026-03-25 22:46:17.588 | INFO     | src._get.extractors:extract_supply_data:550 - Fetching supply data from DefiLlama...
+2026-03-25 22:46:21.493 | INFO     | src._get.extractors:extract_supply_data:575 -   ✓ USDT: 2191 rows
+2026-03-25 22:46:22.953 | INFO     | src._get.extractors:extract_supply_data:575 -   ✓ USDC: 2191 rows
+2026-03-25 22:46:24.751 | INFO     | src._get.extractors:extract_supply_data:575 -   ✓ DAI: 2191 rows
+2026-03-25 22:46:25.964 | INFO     | src._get.extractors:extract_supply_data:575 -   ✓ FRAX: 1833 rows
+2026-03-25 22:46:25.977 | INFO     | src._get.extractors:extract_supply_data:583 - Saved supply data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\supply_raw.parquet
+2026-03-25 22:46:26.007 | INFO     | src._get.extractors:run_full_extraction:653 - 
+[3/3] Extracting pool data...
+2026-03-25 22:46:26.007 | INFO     | src._get.extractors:extract_pool_data:594 - Fetching liquidity pool data...
+2026-03-25 22:46:29.171 | INFO     | src._get.extractors:extract_pool_data:612 -   ✓ Pools: 5728 stablecoin pools
+2026-03-25 22:46:29.289 | INFO     | src._get.extractors:run_full_extraction:660 - 
+============================================================
+2026-03-25 22:46:29.289 | INFO     | src._get.extractors:run_full_extraction:661 - Extraction Summary
+2026-03-25 22:46:29.290 | INFO     | src._get.extractors:run_full_extraction:662 - ============================================================
+2026-03-25 22:46:29.290 | INFO     | src._get.extractors:run_full_extraction:669 -   prices: 2,192 rows
+2026-03-25 22:46:29.290 | INFO     | src._get.extractors:run_full_extraction:669 -   supply: 8,406 rows
+2026-03-25 22:46:29.291 | INFO     | src._get.extractors:run_full_extraction:669 -   pools: 5,728 rows
+2026-03-25 22:46:29.291 | INFO     | src._get.extractors:run_full_extraction:673 - 
+Total: 16,326 rows
+2026-03-25 22:46:29.291 | INFO     | src._get.extractors:run_full_extraction:674 - Files saved to: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 22:46:29.292 | INFO     | __main__:main:90 - 
+============================================================
+2026-03-25 22:46:29.292 | INFO     | __main__:main:91 - Extraction Summary
+2026-03-25 22:46:29.292 | INFO     | __main__:main:92 - ============================================================
+2026-03-25 22:46:29.292 | INFO     | __main__:main:96 -   prices: 2192 rows, 6 columns
+2026-03-25 22:46:29.294 | ERROR    | __main__:main:107 - Extraction failed: [Errno 13] Permission denied: 'data/'
+2026-03-25 22:51:34.683 | INFO     | __main__:main:65 - ============================================================
+2026-03-25 22:51:34.683 | INFO     | __main__:main:66 - Starting data extraction
+2026-03-25 22:51:34.684 | INFO     | __main__:main:67 - ============================================================
+2026-03-25 22:51:34.687 | INFO     | __main__:main:78 - Date range: 2020-01-01 to 2026-03-25
+2026-03-25 22:51:34.689 | INFO     | src._get.extractors:__init__:41 - Initialized Binance client (no auth needed)
+2026-03-25 22:51:34.689 | INFO     | src._get.extractors:__init__:192 - Initialized DefiLlama client
+2026-03-25 22:51:34.691 | INFO     | src._get.extractors:__init__:366 - Initialized DataExtractor
+2026-03-25 22:51:34.692 | INFO     | src._get.extractors:run_full_extraction:630 - ============================================================
+2026-03-25 22:51:34.692 | INFO     | src._get.extractors:run_full_extraction:631 - Starting MVP Data Extraction
+2026-03-25 22:51:34.693 | INFO     | src._get.extractors:run_full_extraction:632 - ============================================================
+2026-03-25 22:51:34.693 | INFO     | src._get.extractors:run_full_extraction:633 - Date range: 2020-01-01 to 2025-12-31
+2026-03-25 22:51:34.693 | INFO     | src._get.extractors:run_full_extraction:634 - Output directory: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 22:51:34.694 | INFO     | src._get.extractors:run_full_extraction:639 - 
+[1/3] Extracting price data...
+2026-03-25 22:51:34.694 | INFO     | src._get.extractors:extract_price_data:465 - Fetching stablecoin prices from DefiLlama...
+2026-03-25 22:51:36.001 | INFO     | src._get.extractors:extract_price_data:500 -   ✓ USDT: 1823 rows
+2026-03-25 22:51:36.003 | INFO     | src._get.extractors:extract_price_data:500 -   ✓ USDC: 1823 rows
+2026-03-25 22:51:36.005 | INFO     | src._get.extractors:extract_price_data:500 -   ✓ DAI: 1823 rows
+2026-03-25 22:51:36.006 | INFO     | src._get.extractors:extract_price_data:500 -   ✓ FRAX: 1823 rows
+2026-03-25 22:51:36.007 | INFO     | src._get.extractors:extract_price_data:510 - Loading UST from CSV...
+2026-03-25 22:51:36.007 | INFO     | src._get.extractors:load_ust_from_csv:398 - Loading UST from C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\ust_coinmarketcap.csv
+2026-03-25 22:51:36.047 | ERROR    | src._get.extractors:load_ust_from_csv:443 - Failed to load UST CSV: 'int' object has no attribute 'date'
+2026-03-25 22:51:36.184 | INFO     | src._get.extractors:extract_price_data:534 - Saved price data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.parquet (7292 total rows)
+2026-03-25 22:51:36.233 | INFO     | src._get.extractors:extract_price_data:539 - Saved CSV copy to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.csv
+2026-03-25 22:51:36.234 | INFO     | src._get.extractors:run_full_extraction:646 - 
+[2/3] Extracting supply data...
+2026-03-25 22:51:36.235 | INFO     | src._get.extractors:extract_supply_data:550 - Fetching supply data from DefiLlama...
+2026-03-25 22:51:37.878 | INFO     | src._get.extractors:extract_supply_data:575 -   ✓ USDT: 2191 rows
+2026-03-25 22:51:39.276 | INFO     | src._get.extractors:extract_supply_data:575 -   ✓ USDC: 2191 rows
+2026-03-25 22:51:39.967 | INFO     | src._get.extractors:extract_supply_data:575 -   ✓ DAI: 2191 rows
+2026-03-25 22:51:40.483 | INFO     | src._get.extractors:extract_supply_data:575 -   ✓ FRAX: 1833 rows
+2026-03-25 22:51:40.492 | INFO     | src._get.extractors:extract_supply_data:583 - Saved supply data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\supply_raw.parquet
+2026-03-25 22:51:40.517 | INFO     | src._get.extractors:run_full_extraction:653 - 
+[3/3] Extracting pool data...
+2026-03-25 22:51:40.519 | INFO     | src._get.extractors:extract_pool_data:594 - Fetching liquidity pool data...
+2026-03-25 22:51:44.587 | INFO     | src._get.extractors:extract_pool_data:612 -   ✓ Pools: 5728 stablecoin pools
+2026-03-25 22:51:44.717 | INFO     | src._get.extractors:run_full_extraction:660 - 
+============================================================
+2026-03-25 22:51:44.718 | INFO     | src._get.extractors:run_full_extraction:661 - Extraction Summary
+2026-03-25 22:51:44.719 | INFO     | src._get.extractors:run_full_extraction:662 - ============================================================
+2026-03-25 22:51:44.719 | INFO     | src._get.extractors:run_full_extraction:669 -   prices: 7,292 rows
+2026-03-25 22:51:44.720 | INFO     | src._get.extractors:run_full_extraction:669 -   supply: 8,406 rows
+2026-03-25 22:51:44.720 | INFO     | src._get.extractors:run_full_extraction:669 -   pools: 5,728 rows
+2026-03-25 22:51:44.721 | INFO     | src._get.extractors:run_full_extraction:673 - 
+Total: 21,426 rows
+2026-03-25 22:51:44.721 | INFO     | src._get.extractors:run_full_extraction:674 - Files saved to: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 22:51:44.721 | INFO     | __main__:main:90 - 
+============================================================
+2026-03-25 22:51:44.722 | INFO     | __main__:main:91 - Extraction Summary
+2026-03-25 22:51:44.722 | INFO     | __main__:main:92 - ============================================================
+2026-03-25 22:51:44.723 | INFO     | __main__:main:96 -   prices: 7292 rows, 6 columns
+2026-03-25 22:51:44.724 | INFO     | __main__:main:98 -     Date range: 2020-12-29 19:00:00 to 2025-12-30 19:00:00
+2026-03-25 22:51:44.725 | INFO     | __main__:main:96 -   supply: 8406 rows, 2 columns
+2026-03-25 22:51:44.726 | INFO     | __main__:main:98 -     Date range: 2020-01-01 19:00:00 to 2025-12-30 19:00:00
+2026-03-25 22:51:44.726 | INFO     | __main__:main:96 -   pools: 5728 rows, 28 columns
+2026-03-25 22:51:44.727 | INFO     | __main__:main:98 -     Date range: 7 to 18606
+2026-03-25 22:51:44.727 | INFO     | __main__:main:102 - 
+Extraction complete!
+2026-03-25 22:58:32.892 | INFO     | __main__:main:65 - ============================================================
+2026-03-25 22:58:32.893 | INFO     | __main__:main:66 - Starting data extraction
+2026-03-25 22:58:32.894 | INFO     | __main__:main:67 - ============================================================
+2026-03-25 22:58:32.897 | INFO     | __main__:main:78 - Date range: 2020-01-01 to 2026-03-25
+2026-03-25 22:58:32.900 | INFO     | src._get.extractors:__init__:41 - Initialized Binance client (no auth needed)
+2026-03-25 22:58:32.901 | INFO     | src._get.extractors:__init__:192 - Initialized DefiLlama client
+2026-03-25 22:58:32.901 | INFO     | src._get.extractors:__init__:366 - Initialized DataExtractor
+2026-03-25 22:58:32.902 | INFO     | src._get.extractors:run_full_extraction:641 - ============================================================
+2026-03-25 22:58:32.902 | INFO     | src._get.extractors:run_full_extraction:642 - Starting MVP Data Extraction
+2026-03-25 22:58:32.903 | INFO     | src._get.extractors:run_full_extraction:643 - ============================================================
+2026-03-25 22:58:32.903 | INFO     | src._get.extractors:run_full_extraction:644 - Date range: 2020-01-01 to 2025-12-31
+2026-03-25 22:58:32.904 | INFO     | src._get.extractors:run_full_extraction:645 - Output directory: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 22:58:32.904 | INFO     | src._get.extractors:run_full_extraction:650 - 
+[1/3] Extracting price data...
+2026-03-25 22:58:32.904 | INFO     | src._get.extractors:extract_price_data:476 - Fetching stablecoin prices from DefiLlama...
+2026-03-25 22:58:34.196 | INFO     | src._get.extractors:extract_price_data:511 -   ✓ USDT: 1823 rows
+2026-03-25 22:58:34.198 | INFO     | src._get.extractors:extract_price_data:511 -   ✓ USDC: 1823 rows
+2026-03-25 22:58:34.200 | INFO     | src._get.extractors:extract_price_data:511 -   ✓ DAI: 1823 rows
+2026-03-25 22:58:34.201 | INFO     | src._get.extractors:extract_price_data:511 -   ✓ FRAX: 1823 rows
+2026-03-25 22:58:34.202 | INFO     | src._get.extractors:extract_price_data:521 - Loading UST from CSV...
+2026-03-25 22:58:34.203 | INFO     | src._get.extractors:load_ust_from_csv:398 - Loading UST from C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\ust_coinmarketcap.csv
+2026-03-25 22:58:34.247 | INFO     | src._get.extractors:load_ust_from_csv:449 -   ✓ UST: 1133 rows (2020-11-25 to 2024-01-01)
+2026-03-25 22:58:34.390 | INFO     | src._get.extractors:extract_price_data:545 - Saved price data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.parquet (8425 total rows)
+2026-03-25 22:58:34.460 | INFO     | src._get.extractors:extract_price_data:550 - Saved CSV copy to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.csv
+2026-03-25 22:58:34.461 | INFO     | src._get.extractors:run_full_extraction:657 - 
+[2/3] Extracting supply data...
+2026-03-25 22:58:34.462 | INFO     | src._get.extractors:extract_supply_data:561 - Fetching supply data from DefiLlama...
+2026-03-25 22:58:35.937 | INFO     | src._get.extractors:extract_supply_data:586 -   ✓ USDT: 2191 rows
+2026-03-25 22:58:37.342 | INFO     | src._get.extractors:extract_supply_data:586 -   ✓ USDC: 2191 rows
+2026-03-25 22:58:37.961 | INFO     | src._get.extractors:extract_supply_data:586 -   ✓ DAI: 2191 rows
+2026-03-25 22:58:38.250 | INFO     | src._get.extractors:extract_supply_data:586 -   ✓ FRAX: 1833 rows
+2026-03-25 22:58:38.273 | INFO     | src._get.extractors:extract_supply_data:594 - Saved supply data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\supply_raw.parquet
+2026-03-25 22:58:38.311 | INFO     | src._get.extractors:run_full_extraction:664 - 
+[3/3] Extracting pool data...
+2026-03-25 22:58:38.312 | INFO     | src._get.extractors:extract_pool_data:605 - Fetching liquidity pool data...
+2026-03-25 22:58:39.996 | INFO     | src._get.extractors:extract_pool_data:623 -   ✓ Pools: 5728 stablecoin pools
+2026-03-25 22:58:40.123 | INFO     | src._get.extractors:run_full_extraction:671 - 
+============================================================
+2026-03-25 22:58:40.124 | INFO     | src._get.extractors:run_full_extraction:672 - Extraction Summary
+2026-03-25 22:58:40.124 | INFO     | src._get.extractors:run_full_extraction:673 - ============================================================
+2026-03-25 22:58:40.124 | INFO     | src._get.extractors:run_full_extraction:680 -   prices: 8,425 rows
+2026-03-25 22:58:40.125 | INFO     | src._get.extractors:run_full_extraction:680 -   supply: 8,406 rows
+2026-03-25 22:58:40.125 | INFO     | src._get.extractors:run_full_extraction:680 -   pools: 5,728 rows
+2026-03-25 22:58:40.126 | INFO     | src._get.extractors:run_full_extraction:684 - 
+Total: 22,559 rows
+2026-03-25 22:58:40.126 | INFO     | src._get.extractors:run_full_extraction:685 - Files saved to: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 22:58:40.126 | INFO     | __main__:main:90 - 
+============================================================
+2026-03-25 22:58:40.127 | INFO     | __main__:main:91 - Extraction Summary
+2026-03-25 22:58:40.127 | INFO     | __main__:main:92 - ============================================================
+2026-03-25 22:58:40.127 | INFO     | __main__:main:96 -   prices: 8425 rows, 6 columns
+2026-03-25 22:58:40.130 | ERROR    | __main__:main:106 - Extraction failed: Cannot compare tz-naive and tz-aware timestamps
+2026-03-25 23:03:27.258 | INFO     | __main__:main:66 - ============================================================
+2026-03-25 23:03:27.259 | INFO     | __main__:main:67 - Starting data extraction
+2026-03-25 23:03:27.260 | INFO     | __main__:main:68 - ============================================================
+2026-03-25 23:03:27.265 | INFO     | __main__:main:79 - Date range: 2020-01-01 to 2026-03-25
+2026-03-25 23:03:27.267 | INFO     | src._get.extractors:__init__:41 - Initialized Binance client (no auth needed)
+2026-03-25 23:03:27.268 | INFO     | src._get.extractors:__init__:192 - Initialized DefiLlama client
+2026-03-25 23:03:27.270 | INFO     | src._get.extractors:__init__:366 - Initialized DataExtractor
+2026-03-25 23:03:27.270 | INFO     | src._get.extractors:run_full_extraction:641 - ============================================================
+2026-03-25 23:03:27.271 | INFO     | src._get.extractors:run_full_extraction:642 - Starting MVP Data Extraction
+2026-03-25 23:03:27.271 | INFO     | src._get.extractors:run_full_extraction:643 - ============================================================
+2026-03-25 23:03:27.271 | INFO     | src._get.extractors:run_full_extraction:644 - Date range: 2020-01-01 to 2025-12-31
+2026-03-25 23:03:27.272 | INFO     | src._get.extractors:run_full_extraction:645 - Output directory: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 23:03:27.272 | INFO     | src._get.extractors:run_full_extraction:650 - 
+[1/3] Extracting price data...
+2026-03-25 23:03:27.272 | INFO     | src._get.extractors:extract_price_data:476 - Fetching stablecoin prices from DefiLlama...
+2026-03-25 23:03:28.653 | INFO     | src._get.extractors:extract_price_data:511 -   ✓ USDT: 1823 rows
+2026-03-25 23:03:28.655 | INFO     | src._get.extractors:extract_price_data:511 -   ✓ USDC: 1823 rows
+2026-03-25 23:03:28.656 | INFO     | src._get.extractors:extract_price_data:511 -   ✓ DAI: 1823 rows
+2026-03-25 23:03:28.657 | INFO     | src._get.extractors:extract_price_data:511 -   ✓ FRAX: 1823 rows
+2026-03-25 23:03:28.657 | INFO     | src._get.extractors:extract_price_data:521 - Loading UST from CSV...
+2026-03-25 23:03:28.658 | INFO     | src._get.extractors:load_ust_from_csv:398 - Loading UST from C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\ust_coinmarketcap.csv
+2026-03-25 23:03:28.725 | INFO     | src._get.extractors:load_ust_from_csv:449 -   ✓ UST: 1133 rows (2020-11-25 to 2024-01-01)
+2026-03-25 23:03:28.893 | INFO     | src._get.extractors:extract_price_data:545 - Saved price data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.parquet (8425 total rows)
+2026-03-25 23:03:28.969 | INFO     | src._get.extractors:extract_price_data:550 - Saved CSV copy to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.csv
+2026-03-25 23:03:28.972 | INFO     | src._get.extractors:run_full_extraction:657 - 
+[2/3] Extracting supply data...
+2026-03-25 23:03:28.973 | INFO     | src._get.extractors:extract_supply_data:561 - Fetching supply data from DefiLlama...
+2026-03-25 23:03:30.341 | INFO     | src._get.extractors:extract_supply_data:586 -   ✓ USDT: 2191 rows
+2026-03-25 23:03:31.831 | INFO     | src._get.extractors:extract_supply_data:586 -   ✓ USDC: 2191 rows
+2026-03-25 23:03:32.427 | INFO     | src._get.extractors:extract_supply_data:586 -   ✓ DAI: 2191 rows
+2026-03-25 23:03:32.703 | INFO     | src._get.extractors:extract_supply_data:586 -   ✓ FRAX: 1833 rows
+2026-03-25 23:03:32.716 | INFO     | src._get.extractors:extract_supply_data:594 - Saved supply data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\supply_raw.parquet
+2026-03-25 23:03:32.745 | INFO     | src._get.extractors:run_full_extraction:664 - 
+[3/3] Extracting pool data...
+2026-03-25 23:03:32.746 | INFO     | src._get.extractors:extract_pool_data:605 - Fetching liquidity pool data...
+2026-03-25 23:03:34.336 | INFO     | src._get.extractors:extract_pool_data:623 -   ✓ Pools: 5728 stablecoin pools
+2026-03-25 23:03:34.468 | INFO     | src._get.extractors:run_full_extraction:671 - 
+============================================================
+2026-03-25 23:03:34.469 | INFO     | src._get.extractors:run_full_extraction:672 - Extraction Summary
+2026-03-25 23:03:34.469 | INFO     | src._get.extractors:run_full_extraction:673 - ============================================================
+2026-03-25 23:03:34.470 | INFO     | src._get.extractors:run_full_extraction:680 -   prices: 8,425 rows
+2026-03-25 23:03:34.470 | INFO     | src._get.extractors:run_full_extraction:680 -   supply: 8,406 rows
+2026-03-25 23:03:34.470 | INFO     | src._get.extractors:run_full_extraction:680 -   pools: 5,728 rows
+2026-03-25 23:03:34.471 | INFO     | src._get.extractors:run_full_extraction:684 - 
+Total: 22,559 rows
+2026-03-25 23:03:34.471 | INFO     | src._get.extractors:run_full_extraction:685 - Files saved to: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 23:03:34.471 | INFO     | __main__:main:91 - 
+============================================================
+2026-03-25 23:03:34.471 | INFO     | __main__:main:92 - Extraction Summary
+2026-03-25 23:03:34.472 | INFO     | __main__:main:93 - ============================================================
+2026-03-25 23:03:34.472 | INFO     | __main__:main:97 -   prices: 8425 rows, 6 columns
+2026-03-25 23:03:34.476 | ERROR    | __main__:main:112 - Extraction failed: Cannot compare tz-naive and tz-aware timestamps
+2026-03-25 23:07:42.635 | INFO     | __main__:main:66 - ============================================================
+2026-03-25 23:07:42.636 | INFO     | __main__:main:67 - Starting data extraction
+2026-03-25 23:07:42.636 | INFO     | __main__:main:68 - ============================================================
+2026-03-25 23:07:42.640 | INFO     | __main__:main:79 - Date range: 2020-01-01 to 2026-03-25
+2026-03-25 23:07:42.643 | INFO     | src._get.extractors:__init__:41 - Initialized Binance client (no auth needed)
+2026-03-25 23:07:42.644 | INFO     | src._get.extractors:__init__:192 - Initialized DefiLlama client
+2026-03-25 23:07:42.645 | INFO     | src._get.extractors:__init__:379 - Initialized DataExtractor
+2026-03-25 23:07:42.646 | INFO     | src._get.extractors:run_full_extraction:654 - ============================================================
+2026-03-25 23:07:42.647 | INFO     | src._get.extractors:run_full_extraction:655 - Starting MVP Data Extraction
+2026-03-25 23:07:42.647 | INFO     | src._get.extractors:run_full_extraction:656 - ============================================================
+2026-03-25 23:07:42.647 | INFO     | src._get.extractors:run_full_extraction:657 - Date range: 2020-01-01 to 2025-12-31
+2026-03-25 23:07:42.648 | INFO     | src._get.extractors:run_full_extraction:658 - Output directory: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 23:07:42.648 | INFO     | src._get.extractors:run_full_extraction:663 - 
+[1/3] Extracting price data...
+2026-03-25 23:07:42.649 | INFO     | src._get.extractors:extract_price_data:489 - Fetching stablecoin prices from DefiLlama...
+2026-03-25 23:07:43.915 | INFO     | src._get.extractors:extract_price_data:524 -   ✓ USDT: 1823 rows
+2026-03-25 23:07:43.917 | INFO     | src._get.extractors:extract_price_data:524 -   ✓ USDC: 1823 rows
+2026-03-25 23:07:43.919 | INFO     | src._get.extractors:extract_price_data:524 -   ✓ DAI: 1823 rows
+2026-03-25 23:07:43.920 | INFO     | src._get.extractors:extract_price_data:524 -   ✓ FRAX: 1823 rows
+2026-03-25 23:07:43.920 | INFO     | src._get.extractors:extract_price_data:534 - Loading UST from CSV...
+2026-03-25 23:07:43.921 | INFO     | src._get.extractors:load_ust_from_csv:411 - Loading UST from C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\ust_coinmarketcap.csv
+2026-03-25 23:07:43.995 | INFO     | src._get.extractors:load_ust_from_csv:462 -   ✓ UST: 1133 rows (2020-11-25 to 2024-01-01)
+2026-03-25 23:07:44.185 | INFO     | src._get.extractors:extract_price_data:558 - Saved price data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.parquet (8425 total rows)
+2026-03-25 23:07:44.259 | INFO     | src._get.extractors:extract_price_data:563 - Saved CSV copy to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\prices_raw.csv
+2026-03-25 23:07:44.262 | INFO     | src._get.extractors:run_full_extraction:670 - 
+[2/3] Extracting supply data...
+2026-03-25 23:07:44.262 | INFO     | src._get.extractors:extract_supply_data:574 - Fetching supply data from DefiLlama...
+2026-03-25 23:07:45.498 | INFO     | src._get.extractors:extract_supply_data:599 -   ✓ USDT: 2191 rows
+2026-03-25 23:07:46.747 | INFO     | src._get.extractors:extract_supply_data:599 -   ✓ USDC: 2191 rows
+2026-03-25 23:07:47.330 | INFO     | src._get.extractors:extract_supply_data:599 -   ✓ DAI: 2191 rows
+2026-03-25 23:07:47.579 | INFO     | src._get.extractors:extract_supply_data:599 -   ✓ FRAX: 1833 rows
+2026-03-25 23:07:47.595 | INFO     | src._get.extractors:extract_supply_data:607 - Saved supply data to C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw\supply_raw.parquet
+2026-03-25 23:07:47.646 | INFO     | src._get.extractors:run_full_extraction:677 - 
+[3/3] Extracting pool data...
+2026-03-25 23:07:47.646 | INFO     | src._get.extractors:extract_pool_data:618 - Fetching liquidity pool data...
+2026-03-25 23:07:49.307 | INFO     | src._get.extractors:extract_pool_data:636 -   ✓ Pools: 5728 stablecoin pools
+2026-03-25 23:07:49.440 | INFO     | src._get.extractors:run_full_extraction:684 - 
+============================================================
+2026-03-25 23:07:49.441 | INFO     | src._get.extractors:run_full_extraction:685 - Extraction Summary
+2026-03-25 23:07:49.441 | INFO     | src._get.extractors:run_full_extraction:686 - ============================================================
+2026-03-25 23:07:49.442 | INFO     | src._get.extractors:run_full_extraction:693 -   prices: 8,425 rows
+2026-03-25 23:07:49.442 | INFO     | src._get.extractors:run_full_extraction:693 -   supply: 8,406 rows
+2026-03-25 23:07:49.443 | INFO     | src._get.extractors:run_full_extraction:693 -   pools: 5,728 rows
+2026-03-25 23:07:49.443 | INFO     | src._get.extractors:run_full_extraction:697 - 
+Total: 22,559 rows
+2026-03-25 23:07:49.444 | INFO     | src._get.extractors:run_full_extraction:698 - Files saved to: C:\Users\Suvrorup Mukherjee\Documents\Researxh\stablecoin-depeg-risk\data\raw
+2026-03-25 23:07:49.445 | INFO     | __main__:main:91 - 
+============================================================
+2026-03-25 23:07:49.445 | INFO     | __main__:main:92 - Extraction Summary
+2026-03-25 23:07:49.446 | INFO     | __main__:main:93 - ============================================================
+2026-03-25 23:07:49.446 | INFO     | __main__:main:97 -   prices: 8425 rows, 6 columns
+2026-03-25 23:07:49.451 | ERROR    | __main__:main:112 - Extraction failed: Cannot compare tz-naive and tz-aware timestamps
