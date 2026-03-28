@@ -1,0 +1,16 @@
+{
+  "local_level": {
+    "log_likelihood": 36438.87260152926,
+    "observation_noise": 2.440831691459564e-06,
+    "transition_noise": 4.078787355231537e-05
+  },
+  "volatility_kf": {
+    "log_likelihood": 23517.78898725679,
+    "transition_coeff": 0.95,
+    "observation_noise": 0.00039390124636864087
+  },
+  "stochastic_volatility": {
+    "log_likelihood": -23188.725303483145,
+    "phi": 0.9480413318960355
+  }
+}

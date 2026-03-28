@@ -240,6 +240,7 @@ class DefiLlamaClient:
             date = item.get("date")
             circulating = item.get("circulating", {})
             
+            # Handle different response structures
             total = 0
             if isinstance(circulating, dict):
                 # Try peggedUSD directly
@@ -378,176 +379,143 @@ class DataExtractor:
         
         logger.info("Initialized DataExtractor")
     
-    def load_ust_from_csv(self, csv_path: Optional[Path] = None) -> pd.DataFrame:
+    def load_coinmarketcap_csv(self, csv_path: Path, symbol: str) -> pd.DataFrame:
         """
-        Load UST historical data from CoinMarketCap CSV.
+        Load historical data from CoinMarketCap CSV.
         
         Args:
-            csv_path: Path to UST CSV file
+            csv_path: Path to CSV file
+            symbol: Stablecoin symbol (USDT, USDC, etc.)
             
         Returns:
-            DataFrame with UST price data
+            DataFrame with OHLCV + market cap data
         """
-        if csv_path is None:
-            # Look for UST CSV in raw data folder
-            possible_names = [
-                "ust_coinmarketcap.csv",
-                "ust.csv",
-                "terrausd.csv",
-                "UST.csv",
-                "TerraUSD.csv"
-            ]
-            
-            for name in possible_names:
-                path = self.raw_dir / name
-                if path.exists():
-                    csv_path = path
-                    break
-        
-        if csv_path is None or not Path(csv_path).exists():
-            logger.warning("UST CSV not found. Place it in data/raw/ust_coinmarketcap.csv")
-            return pd.DataFrame()
-        
-        logger.info(f"Loading UST from {csv_path}")
+        logger.info(f"Loading {symbol} from {csv_path}")
         
         try:
-            try:
-                df = pd.read_csv(csv_path, delimiter=";")
-            except:
-                df = pd.read_csv(csv_path)
+            # CoinMarketCap uses semicolon delimiter
+            df = pd.read_csv(csv_path, delimiter=";")
             
             # Standardize column names
             df.columns = df.columns.str.lower().str.strip()
             
-            # Handle different date column names
+            # Parse date from timeOpen
             date_col = None
-            for col in ["timeopen", "date", "timestamp", "time"]:
+            for col in ["timeopen", "date", "timestamp"]:
                 if col in df.columns:
                     date_col = col
                     break
             
             if date_col is None:
-                logger.error("No date column found in UST CSV")
+                logger.error(f"No date column found in {csv_path}")
                 return pd.DataFrame()
             
-            # Parse date
-            df["date"] = pd.to_datetime(df[date_col])
+            # Parse date and remove timezone
+            df["date"] = pd.to_datetime(df[date_col]).dt.tz_localize(None)
             df = df.set_index("date")
             
-            # Rename to standard format
+            # Rename columns to standard format
             rename_map = {
-                "close": "price",
                 "open": "open",
                 "high": "high",
                 "low": "low",
+                "close": "price",
                 "volume": "volume",
                 "marketcap": "market_cap",
+                "circulatingsupply": "circulating_supply"
             }
             df = df.rename(columns=rename_map)
             
-            # Ensure price column exists
-            if "price" not in df.columns:
-                logger.error("No price/close column found in UST CSV")
-                return pd.DataFrame()
-            
-            # Clean numeric columns
-            for col in ["price", "open", "high", "low", "volume", "market_cap"]:
+            # Ensure numeric columns
+            numeric_cols = ["open", "high", "low", "price", "volume", "market_cap", "circulating_supply"]
+            for col in numeric_cols:
                 if col in df.columns:
                     df[col] = pd.to_numeric(df[col], errors="coerce")
             
+            # Sort by date
             df = df.sort_index()
-            df["symbol"] = "UST"
-            df["coin_id"] = "terrausd"
             
-            logger.info(f"  ✓ UST: {len(df)} rows ({df.index.min().date()} to {df.index.max().date()})")
+            # Add identifiers
+            df["symbol"] = symbol
+            df["coin_id"] = symbol.lower()
+            
+            # Keep only relevant columns
+            keep_cols = ["open", "high", "low", "price", "volume", "market_cap", "circulating_supply", "symbol", "coin_id"]
+            df = df[[c for c in keep_cols if c in df.columns]]
+            
+            logger.info(f"  ✓ {symbol}: {len(df)} rows ({df.index.min().date()} to {df.index.max().date()})")
             
             return df
             
         except Exception as e:
-            logger.error(f"Failed to load UST CSV: {e}")
+            logger.error(f"Failed to load {symbol} CSV: {e}")
+            import traceback
+            traceback.print_exc()
             return pd.DataFrame()
     
     def extract_price_data(self) -> pd.DataFrame:
         """
-        Extract price data for all stablecoins and reference assets.
+        Extract price data for all stablecoins from CoinMarketCap CSVs.
         
-        Uses:
-        - DefiLlama for stablecoin prices (USDT, USDC, DAI, FRAX)
-        - CSV for UST (delisted)
-        - Note: BTC/ETH not included (use separate source if needed)
+        Looks for CSV files in data/raw/ with names like:
+        - usdt_coinmarketcap.csv
+        - usdc_coinmarketcap.csv
+        - dai_coinmarketcap.csv
+        - frax_coinmarketcap.csv
+        - ust_coinmarketcap.csv
         
         Returns:
-            DataFrame with price data for all assets
+            DataFrame with OHLCV + market cap data for all assets
         """
-        date_range = self.config["data"]["date_range"]
-        start_date = date_range["start"]
-        end_date = date_range["end"]
+        logger.info("Loading stablecoin data from CoinMarketCap CSVs...")
+        
+        # Get date range from config
+        date_range = self.config.get("data", {}).get("date_range", {})
+        start_date = date_range.get("start", "2020-01-01")
+        end_date = date_range.get("end", datetime.now().strftime("%Y-%m-%d"))
+        
+        logger.info(f"Date range filter: {start_date} to {end_date}")
+        
+        # Define stablecoins and their possible CSV names
+        stablecoins = {
+            "USDT": ["usdt_coinmarketcap.csv", "usdt.csv", "tether.csv", "USDT.csv"],
+            "USDC": ["usdc_coinmarketcap.csv", "usdc.csv", "usd-coin.csv", "USDC.csv"],
+            "DAI": ["dai_coinmarketcap.csv", "dai.csv", "DAI.csv"],
+            "FRAX": ["frax_coinmarketcap.csv", "frax.csv", "FRAX.csv"],
+            "UST": ["ust_coinmarketcap.csv", "ust.csv", "terrausd.csv", "UST.csv"],
+        }
         
         dfs = []
         
-        # 1. Get stablecoin prices from DefiLlama
-        logger.info("Fetching stablecoin prices from DefiLlama...")
-        
-        try:
-            prices_df = self.defillama.get_stablecoin_prices()
+        for symbol, possible_names in stablecoins.items():
+            csv_path = None
             
-            if not prices_df.empty:
-                # DefiLlama returns prices with gecko_id as columns
-                # Map to our symbols
-                symbol_map = {
-                    "tether": "USDT",
-                    "usd-coin": "USDC",
-                    "dai": "DAI",
-                    "frax": "FRAX",
-                }
+            # Find the CSV file
+            for name in possible_names:
+                path = self.raw_dir / name
+                if path.exists():
+                    csv_path = path
+                    break
+            
+            if csv_path is None:
+                logger.warning(f"  ✗ {symbol}: No CSV found (tried: {possible_names})")
+                continue
+            
+            # Load the CSV
+            df = self.load_coinmarketcap_csv(csv_path, symbol)
+            if not df.empty:
+                # Filter by date range
+                df = df[(df.index >= start_date) & (df.index <= end_date)]
                 
-                for gecko_id, symbol in symbol_map.items():
-                    if gecko_id in prices_df.columns:
-                        coin_df = pd.DataFrame({
-                            "price": prices_df[gecko_id],
-                            "volume": np.nan,
-                            "high": np.nan,
-                            "low": np.nan,
-                            "symbol": symbol,
-                            "coin_id": gecko_id
-                        })
-                        coin_df.index.name = "timestamp"
-                        
-                        # Filter by date range
-                        coin_df = coin_df[
-                            (coin_df.index >= start_date) & 
-                            (coin_df.index <= end_date)
-                        ]
-                        
-                        if not coin_df.empty:
-                            dfs.append(coin_df)
-                            logger.info(f"  ✓ {symbol}: {len(coin_df)} rows")
-                        else:
-                            logger.warning(f"  ✗ {symbol}: No data in date range")
-                    else:
-                        logger.warning(f"  ✗ {symbol} ({gecko_id}): Not found in DefiLlama")
-                        
-        except Exception as e:
-            logger.error(f"DefiLlama prices failed: {e}")
-        
-        # 2. UST from CSV
-        logger.info("Loading UST from CSV...")
-        ust_df = self.load_ust_from_csv()
-        if not ust_df.empty:
-            # Standardize columns
-            ust_clean = pd.DataFrame({
-                "price": ust_df["price"] if "price" in ust_df.columns else ust_df.get("close"),
-                "volume": ust_df.get("volume", np.nan),
-                "high": ust_df.get("high", np.nan),
-                "low": ust_df.get("low", np.nan),
-                "symbol": "UST",
-                "coin_id": "terrausd"
-            }, index=ust_df.index)
-            dfs.append(ust_clean)
+                if not df.empty:
+                    dfs.append(df)
+                    logger.info(f"    After date filter: {len(df)} rows")
+                else:
+                    logger.warning(f"    No data in date range {start_date} to {end_date}")
         
         # Combine all
         if not dfs:
-            raise ValueError("No price data fetched for any asset")
+            raise ValueError("No price data loaded from any CSV")
         
         combined = pd.concat(dfs)
         combined.index.name = "timestamp"
@@ -566,52 +534,52 @@ class DataExtractor:
     
     def extract_supply_data(self) -> pd.DataFrame:
         """
-        Extract supply/circulating data from DefiLlama.
+        Extract supply data from the loaded price CSVs.
+        
+        CoinMarketCap CSVs include circulatingSupply, so we extract it
+        from the prices_raw.parquet file.
         
         Returns:
             DataFrame with supply metrics
         """
-        logger.info("Fetching supply data from DefiLlama...")
+        logger.info("Extracting supply data from price CSVs...")
         
-        stablecoins_list = self.defillama.get_stablecoins()
-        date_range = self.config["data"]["date_range"]
+        # Load prices (which includes circulating_supply from CoinMarketCap)
+        prices_path = self.raw_dir / "prices_raw.parquet"
         
-        target_symbols = ["USDT", "USDC", "DAI", "FRAX"]
+        if not prices_path.exists():
+            logger.warning("prices_raw.parquet not found. Run extract_price_data first.")
+            return pd.DataFrame()
         
-        dfs = []
-        for symbol in target_symbols:
-            match = stablecoins_list[stablecoins_list["symbol"].str.upper() == symbol.upper()]
+        try:
+            df = pd.read_parquet(prices_path)
             
-            if match.empty:
-                logger.warning(f"  ✗ {symbol} not found in DefiLlama")
-                continue
+            if "circulating_supply" not in df.columns:
+                logger.warning("No circulating_supply column in price data")
+                return pd.DataFrame()
             
-            sc_id = match.iloc[0]["id"]
+            # Extract supply columns
+            supply_df = df[["symbol", "circulating_supply", "market_cap"]].copy()
+            supply_df = supply_df.rename(columns={"circulating_supply": "total_circulating"})
             
-            try:
-                df = self.defillama.get_stablecoin_history(
-                    sc_id,
-                    start_date=date_range["start"],
-                    end_date=date_range["end"]
-                )
-                df["symbol"] = symbol
-                dfs.append(df)
-                logger.info(f"  ✓ {symbol}: {len(df)} rows")
-            except Exception as e:
-                logger.error(f"  ✗ {symbol} supply failed: {e}")
-        
-        if dfs:
-            combined = pd.concat(dfs)
+            # Save
             output_path = self.raw_dir / "supply_raw.parquet"
-            combined.to_parquet(output_path)
+            supply_df.to_parquet(output_path)
             logger.info(f"Saved supply data to {output_path}")
             
             # CSV copy
-            combined.to_csv(self.raw_dir / "supply_raw.csv")
+            supply_df.to_csv(self.raw_dir / "supply_raw.csv")
             
-            return combined
-        
-        return pd.DataFrame()
+            # Log per-asset counts
+            for symbol in supply_df["symbol"].unique():
+                count = len(supply_df[supply_df["symbol"] == symbol])
+                logger.info(f"  ✓ {symbol}: {count} rows")
+            
+            return supply_df
+            
+        except Exception as e:
+            logger.error(f"Supply extraction failed: {e}")
+            return pd.DataFrame()
     
     def extract_pool_data(self) -> pd.DataFrame:
         """Extract liquidity pool data."""

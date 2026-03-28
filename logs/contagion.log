@@ -1,0 +1,347 @@
+2026-03-27 20:43:28.840 | INFO     | __main__:main:105 - ============================================================
+2026-03-27 20:43:28.841 | INFO     | __main__:main:106 - Contagion and Spillover Analysis
+2026-03-27 20:43:28.841 | INFO     | __main__:main:107 - ============================================================
+2026-03-27 20:43:28.842 | ERROR    | __main__:main:115 - Data not found: data\processed\features.parquet
+2026-03-27 20:43:51.089 | INFO     | __main__:main:105 - ============================================================
+2026-03-27 20:43:51.090 | INFO     | __main__:main:106 - Contagion and Spillover Analysis
+2026-03-27 20:43:51.091 | INFO     | __main__:main:107 - ============================================================
+2026-03-27 20:43:51.275 | INFO     | __main__:main:119 - Loaded 10173 rows
+2026-03-27 20:43:51.294 | INFO     | __main__:main:123 - Returns panel: (1733, 5)
+2026-03-27 20:43:51.295 | INFO     | src.analysis.contagion:analyze:426 - Running comprehensive contagion analysis
+2026-03-27 20:43:51.296 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:51.518 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 12.36%
+2026-03-27 20:43:51.518 | INFO     | src.analysis.contagion:analyze:433 - Return spillover index: 12.36%
+2026-03-27 20:43:52.481 | ERROR    | src.analysis.contagion:analyze:451 - Granger causality failed: `eigenvector_centrality_numpy` does not give consistent results for disconnected graphs
+2026-03-27 20:43:52.498 | INFO     | src.analysis.contagion:analyze:459 - High correlation regime: 30.4% of time
+2026-03-27 20:43:52.498 | INFO     | __main__:main:143 - 
+============================================================
+2026-03-27 20:43:52.499 | INFO     | __main__:main:144 - Saving Results
+2026-03-27 20:43:52.499 | INFO     | __main__:main:145 - ============================================================
+2026-03-27 20:43:52.510 | INFO     | __main__:main:166 - 
+Total Spillover Index: 12.36%
+2026-03-27 20:43:52.511 | INFO     | __main__:main:167 - 
+Net Spillovers (positive = net transmitter):
+2026-03-27 20:43:52.511 | INFO     | __main__:main:169 -   USDT: -1.24%
+2026-03-27 20:43:52.511 | INFO     | __main__:main:169 -   USDC: +46.32%
+2026-03-27 20:43:52.511 | INFO     | __main__:main:169 -   DAI: -37.91%
+2026-03-27 20:43:52.512 | INFO     | __main__:main:169 -   FRAX: -6.18%
+2026-03-27 20:43:52.512 | INFO     | __main__:main:169 -   UST: -0.99%
+2026-03-27 20:43:52.537 | INFO     | __main__:main:193 - 
+High correlation regime: 30.4% of observations
+2026-03-27 20:43:52.537 | INFO     | __main__:main:204 - 
+Computing rolling spillovers (window=200)...
+2026-03-27 20:43:52.539 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.552 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 32.22%
+2026-03-27 20:43:52.553 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.560 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 32.81%
+2026-03-27 20:43:52.561 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.572 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 33.96%
+2026-03-27 20:43:52.572 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.578 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 36.21%
+2026-03-27 20:43:52.579 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.589 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 37.04%
+2026-03-27 20:43:52.589 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.595 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 37.18%
+2026-03-27 20:43:52.596 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.605 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 38.06%
+2026-03-27 20:43:52.606 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.612 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 38.67%
+2026-03-27 20:43:52.613 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.623 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 37.27%
+2026-03-27 20:43:52.623 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.630 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 37.72%
+2026-03-27 20:43:52.632 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.639 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 40.76%
+2026-03-27 20:43:52.640 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.647 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 25.17%
+2026-03-27 20:43:52.650 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.656 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 28.48%
+2026-03-27 20:43:52.657 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.667 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.69%
+2026-03-27 20:43:52.668 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.674 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.85%
+2026-03-27 20:43:52.675 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.688 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 26.53%
+2026-03-27 20:43:52.689 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.695 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.81%
+2026-03-27 20:43:52.697 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.705 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.81%
+2026-03-27 20:43:52.706 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.712 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.00%
+2026-03-27 20:43:52.713 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.722 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.46%
+2026-03-27 20:43:52.723 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.733 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.82%
+2026-03-27 20:43:52.734 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.743 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.18%
+2026-03-27 20:43:52.744 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.753 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.52%
+2026-03-27 20:43:52.754 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.759 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.37%
+2026-03-27 20:43:52.760 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.769 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 16.80%
+2026-03-27 20:43:52.769 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.775 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 16.74%
+2026-03-27 20:43:52.776 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.786 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 16.43%
+2026-03-27 20:43:52.787 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.794 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 16.71%
+2026-03-27 20:43:52.795 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.806 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.63%
+2026-03-27 20:43:52.807 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.814 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.06%
+2026-03-27 20:43:52.816 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.823 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 53.64%
+2026-03-27 20:43:52.824 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.832 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.38%
+2026-03-27 20:43:52.833 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.841 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.32%
+2026-03-27 20:43:52.842 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.851 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.26%
+2026-03-27 20:43:52.852 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.859 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.23%
+2026-03-27 20:43:52.859 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.868 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.46%
+2026-03-27 20:43:52.869 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.875 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.36%
+2026-03-27 20:43:52.876 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.886 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.65%
+2026-03-27 20:43:52.887 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.892 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.78%
+2026-03-27 20:43:52.893 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.902 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.11%
+2026-03-27 20:43:52.903 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.910 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.20%
+2026-03-27 20:43:52.911 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.921 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.68%
+2026-03-27 20:43:52.922 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.935 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.88%
+2026-03-27 20:43:52.937 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.943 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 24.69%
+2026-03-27 20:43:52.944 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.967 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 24.66%
+2026-03-27 20:43:52.969 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.977 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.91%
+2026-03-27 20:43:52.977 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:52.991 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.67%
+2026-03-27 20:43:52.992 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.000 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 24.20%
+2026-03-27 20:43:53.001 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.007 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 25.94%
+2026-03-27 20:43:53.008 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.016 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 27.14%
+2026-03-27 20:43:53.017 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.023 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.63%
+2026-03-27 20:43:53.024 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.033 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.15%
+2026-03-27 20:43:53.034 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.040 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.34%
+2026-03-27 20:43:53.041 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.049 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.34%
+2026-03-27 20:43:53.050 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.057 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 24.83%
+2026-03-27 20:43:53.058 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.069 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 25.30%
+2026-03-27 20:43:53.070 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.078 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 25.16%
+2026-03-27 20:43:53.079 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.088 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 25.63%
+2026-03-27 20:43:53.089 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.094 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 26.17%
+2026-03-27 20:43:53.095 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.136 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 77.93%
+2026-03-27 20:43:53.140 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.171 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 44.27%
+2026-03-27 20:43:53.174 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.206 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 43.18%
+2026-03-27 20:43:53.213 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.237 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 43.54%
+2026-03-27 20:43:53.240 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.251 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 43.41%
+2026-03-27 20:43:53.253 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.269 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 44.81%
+2026-03-27 20:43:53.269 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.276 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 44.20%
+2026-03-27 20:43:53.277 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.287 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 44.08%
+2026-03-27 20:43:53.288 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.294 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 45.28%
+2026-03-27 20:43:53.296 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.305 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 44.89%
+2026-03-27 20:43:53.306 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.311 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 44.72%
+2026-03-27 20:43:53.314 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.323 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 44.24%
+2026-03-27 20:43:53.323 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.329 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 43.61%
+2026-03-27 20:43:53.331 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.341 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 43.46%
+2026-03-27 20:43:53.343 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.353 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 45.12%
+2026-03-27 20:43:53.354 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.360 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 46.52%
+2026-03-27 20:43:53.361 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.373 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 45.91%
+2026-03-27 20:43:53.374 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.384 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 46.10%
+2026-03-27 20:43:53.385 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.391 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 46.64%
+2026-03-27 20:43:53.392 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.400 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 47.18%
+2026-03-27 20:43:53.401 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.407 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 24.28%
+2026-03-27 20:43:53.408 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.418 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.17%
+2026-03-27 20:43:53.420 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.426 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.36%
+2026-03-27 20:43:53.427 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.440 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.08%
+2026-03-27 20:43:53.441 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.457 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.19%
+2026-03-27 20:43:53.458 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.470 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.86%
+2026-03-27 20:43:53.471 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.478 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.30%
+2026-03-27 20:43:53.480 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.489 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.75%
+2026-03-27 20:43:53.490 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.500 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.43%
+2026-03-27 20:43:53.501 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.509 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.43%
+2026-03-27 20:43:53.510 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.521 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.17%
+2026-03-27 20:43:53.522 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.528 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.39%
+2026-03-27 20:43:53.529 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.541 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.73%
+2026-03-27 20:43:53.542 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.553 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.58%
+2026-03-27 20:43:53.554 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.561 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.06%
+2026-03-27 20:43:53.562 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.573 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 16.50%
+2026-03-27 20:43:53.574 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.584 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.04%
+2026-03-27 20:43:53.585 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.592 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 15.79%
+2026-03-27 20:43:53.593 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.604 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 15.35%
+2026-03-27 20:43:53.605 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.611 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 15.14%
+2026-03-27 20:43:53.612 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.622 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 14.52%
+2026-03-27 20:43:53.622 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.629 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 13.82%
+2026-03-27 20:43:53.631 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.640 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 13.36%
+2026-03-27 20:43:53.640 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.648 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 13.61%
+2026-03-27 20:43:53.650 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.657 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 13.97%
+2026-03-27 20:43:53.658 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.667 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 14.25%
+2026-03-27 20:43:53.668 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.674 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 14.80%
+2026-03-27 20:43:53.674 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.685 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 16.50%
+2026-03-27 20:43:53.687 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.703 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 16.66%
+2026-03-27 20:43:53.706 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.731 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.41%
+2026-03-27 20:43:53.733 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.744 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.54%
+2026-03-27 20:43:53.746 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.769 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.76%
+2026-03-27 20:43:53.770 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.792 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.41%
+2026-03-27 20:43:53.794 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.819 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 17.68%
+2026-03-27 20:43:53.820 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.836 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.65%
+2026-03-27 20:43:53.838 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.853 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.47%
+2026-03-27 20:43:53.855 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.872 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.58%
+2026-03-27 20:43:53.873 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.888 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.41%
+2026-03-27 20:43:53.889 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.899 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.77%
+2026-03-27 20:43:53.900 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.907 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.28%
+2026-03-27 20:43:53.907 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.917 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.87%
+2026-03-27 20:43:53.919 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.925 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 24.07%
+2026-03-27 20:43:53.926 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.939 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.00%
+2026-03-27 20:43:53.940 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.955 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.46%
+2026-03-27 20:43:53.956 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.964 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.31%
+2026-03-27 20:43:53.965 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.976 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.39%
+2026-03-27 20:43:53.977 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.988 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.77%
+2026-03-27 20:43:53.989 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:53.995 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.44%
+2026-03-27 20:43:53.998 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.006 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.93%
+2026-03-27 20:43:54.007 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.013 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.43%
+2026-03-27 20:43:54.016 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.022 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.58%
+2026-03-27 20:43:54.023 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.032 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.52%
+2026-03-27 20:43:54.034 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.040 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.67%
+2026-03-27 20:43:54.040 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.049 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 18.68%
+2026-03-27 20:43:54.050 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.056 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.49%
+2026-03-27 20:43:54.057 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.065 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.78%
+2026-03-27 20:43:54.066 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.073 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.93%
+2026-03-27 20:43:54.074 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.083 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 19.99%
+2026-03-27 20:43:54.084 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.089 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.36%
+2026-03-27 20:43:54.090 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.098 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.01%
+2026-03-27 20:43:54.099 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.115 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.22%
+2026-03-27 20:43:54.117 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.135 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.23%
+2026-03-27 20:43:54.137 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.154 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.06%
+2026-03-27 20:43:54.156 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.164 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.80%
+2026-03-27 20:43:54.165 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.175 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 23.10%
+2026-03-27 20:43:54.177 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.190 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.88%
+2026-03-27 20:43:54.191 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.198 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.28%
+2026-03-27 20:43:54.199 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.205 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.86%
+2026-03-27 20:43:54.206 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.213 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.35%
+2026-03-27 20:43:54.214 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.221 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.62%
+2026-03-27 20:43:54.222 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.228 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 21.03%
+2026-03-27 20:43:54.230 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.238 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 20.67%
+2026-03-27 20:43:54.239 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.245 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.63%
+2026-03-27 20:43:54.246 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.254 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.28%
+2026-03-27 20:43:54.255 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 5 assets
+2026-03-27 20:43:54.261 | INFO     | src.analysis.contagion:fit:136 - Total spillover index: 22.15%
+2026-03-27 20:43:54.271 | INFO     | __main__:main:221 - Rolling spillover range: 13.4% - 77.9%
+2026-03-27 20:43:54.272 | INFO     | __main__:main:222 - Mean rolling spillover: 25.2%
+2026-03-27 20:43:54.272 | INFO     | __main__:main:227 - 
+============================================================
+2026-03-27 20:43:54.272 | INFO     | __main__:main:228 - Contagion Analysis Complete
+2026-03-27 20:43:54.273 | INFO     | __main__:main:229 - ============================================================
+2026-03-27 20:43:54.273 | INFO     | __main__:main:230 - Results saved to: output\contagion

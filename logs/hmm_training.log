@@ -1,0 +1,68 @@
+2026-03-27 19:29:54.851 | INFO     | __main__:main:74 - ============================================================
+2026-03-27 19:29:54.851 | INFO     | __main__:main:75 - HMM Training for Regime Detection
+2026-03-27 19:29:54.852 | INFO     | __main__:main:76 - ============================================================
+2026-03-27 19:33:37.092 | INFO     | __main__:main:74 - ============================================================
+2026-03-27 19:33:37.092 | INFO     | __main__:main:75 - HMM Training for Regime Detection
+2026-03-27 19:33:37.092 | INFO     | __main__:main:76 - ============================================================
+2026-03-27 19:33:37.096 | ERROR    | __main__:main:88 - Data not found: data\processed\features.parquet
+2026-03-27 19:36:03.203 | INFO     | __main__:main:74 - ============================================================
+2026-03-27 19:36:03.204 | INFO     | __main__:main:75 - HMM Training for Regime Detection
+2026-03-27 19:36:03.204 | INFO     | __main__:main:76 - ============================================================
+2026-03-27 19:36:03.206 | INFO     | __main__:main:91 - Loading data from data\clean\features_all.parquet
+2026-03-27 19:36:03.399 | INFO     | __main__:main:109 - Using features: ['abs_pct_deviation', 'volatility_30d', 'log_return', 'volume_ratio_7d']
+2026-03-27 19:36:03.406 | INFO     | __main__:main:119 - Feature matrix shape: (10023, 4)
+2026-03-27 19:36:03.406 | INFO     | __main__:main:122 - 
+Testing 3 state configurations: [2, 3, 4]
+2026-03-27 19:36:03.407 | INFO     | src.models.hmm:select:319 - Selecting optimal states from [2, 3, 4]
+2026-03-27 19:36:03.407 | INFO     | src.models.hmm:fit:109 - Fitting HMM with 2 states on data shape (10023, 4)
+2026-03-27 19:36:11.223 | INFO     | src.models.hmm:fit:169 - HMM fitted. Log-likelihood: 36896.98, AIC: -73731.95, BIC: -73508.36
+2026-03-27 19:36:11.223 | INFO     | src.models.hmm:select:335 -   n_states=2: LL=36896.98, AIC=-73731.95, BIC=-73508.36
+2026-03-27 19:36:11.223 | INFO     | src.models.hmm:fit:109 - Fitting HMM with 3 states on data shape (10023, 4)
+2026-03-27 19:36:16.234 | INFO     | src.models.hmm:fit:169 - HMM fitted. Log-likelihood: 58166.66, AIC: -116233.32, BIC: -115872.69
+2026-03-27 19:36:16.234 | INFO     | src.models.hmm:select:335 -   n_states=3: LL=58166.66, AIC=-116233.32, BIC=-115872.69
+2026-03-27 19:36:16.235 | INFO     | src.models.hmm:fit:109 - Fitting HMM with 4 states on data shape (10023, 4)
+2026-03-27 19:36:24.942 | INFO     | src.models.hmm:fit:169 - HMM fitted. Log-likelihood: 65085.59, AIC: -130029.19, BIC: -129517.09
+2026-03-27 19:36:24.942 | INFO     | src.models.hmm:select:335 -   n_states=4: LL=65085.59, AIC=-130029.19, BIC=-129517.09
+2026-03-27 19:36:24.943 | INFO     | src.models.hmm:select:352 - Selected n_states=4 based on bic
+2026-03-27 19:36:24.946 | INFO     | __main__:main:147 - 
+Optimal number of states: 4
+2026-03-27 19:36:24.947 | INFO     | __main__:main:150 - 
+Training final model with 4 states...
+2026-03-27 19:36:24.947 | INFO     | src.models.hmm:fit:109 - Fitting HMM with 4 states on data shape (10023, 4)
+2026-03-27 19:36:41.476 | INFO     | src.models.hmm:fit:169 - HMM fitted. Log-likelihood: 65090.48, AIC: -130038.96, BIC: -129526.86
+2026-03-27 19:36:41.479 | INFO     | src.models.hmm:save:259 - Model saved to src\models\hmm\hmm_4states.pkl
+2026-03-27 19:36:41.480 | INFO     | __main__:main:163 - Saved model to src\models\hmm\hmm_4states.pkl
+2026-03-27 19:36:41.493 | INFO     | __main__:main:176 - 
+State Interpretations:
+2026-03-27 19:36:41.495 | INFO     | __main__:main:178 -   State 0: stable
+2026-03-27 19:36:41.495 | INFO     | __main__:main:178 -   State 1: elevated
+2026-03-27 19:36:41.495 | INFO     | __main__:main:178 -   State 2: crisis
+2026-03-27 19:36:41.496 | INFO     | __main__:main:178 -   State 3: state_3
+2026-03-27 19:36:41.532 | INFO     | __main__:main:195 - 
+============================================================
+2026-03-27 19:36:41.532 | INFO     | __main__:main:196 - Training Summary
+2026-03-27 19:36:41.533 | INFO     | __main__:main:197 - ============================================================
+2026-03-27 19:36:41.533 | INFO     | __main__:main:198 - Optimal states: 4
+2026-03-27 19:36:41.533 | INFO     | __main__:main:199 - Log-likelihood: 65090.48
+2026-03-27 19:36:41.534 | INFO     | __main__:main:200 - AIC: -130038.96
+2026-03-27 19:36:41.534 | INFO     | __main__:main:201 - BIC: -129526.86
+2026-03-27 19:36:41.534 | INFO     | __main__:main:203 - 
+Transition Matrix:
+2026-03-27 19:36:41.535 | INFO     | __main__:main:204 - [[0.992 0.006 0.002 0.   ]
+ [0.016 0.962 0.022 0.   ]
+ [0.005 0.07  0.923 0.001]
+ [0.    0.    0.    1.   ]]
+2026-03-27 19:36:41.535 | INFO     | __main__:main:206 - 
+State Means:
+2026-03-27 19:36:41.536 | INFO     | __main__:main:208 -   stable: [-0.37852171 -0.33843695  0.01441921 -0.01734917]
+2026-03-27 19:36:41.536 | INFO     | __main__:main:208 -   elevated: [-0.3732219  -0.26997717  0.01394766 -0.06221916]
+2026-03-27 19:36:41.537 | INFO     | __main__:main:208 -   crisis: [-0.35181443  0.02959605  0.00558066  0.29369428]
+2026-03-27 19:36:41.537 | INFO     | __main__:main:208 -   state_3: [ 2.66917986e+00  2.01850474e+00 -9.57226146e-02  4.09184346e-04]
+2026-03-27 19:36:41.537 | INFO     | __main__:main:210 - 
+State Proportions:
+2026-03-27 19:36:41.537 | INFO     | __main__:main:214 -   stable: 54.2%
+2026-03-27 19:36:41.538 | INFO     | __main__:main:214 -   elevated: 25.1%
+2026-03-27 19:36:41.538 | INFO     | __main__:main:214 -   crisis: 8.5%
+2026-03-27 19:36:41.538 | INFO     | __main__:main:214 -   state_3: 12.3%
+2026-03-27 19:36:41.539 | INFO     | __main__:main:216 - 
+HMM training complete!

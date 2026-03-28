@@ -1,0 +1,24 @@
+depeg:
+  thresholds:
+    minor: 0.005      # 0.5%
+    moderate: 0.01    # 1%
+    severe: 0.03      # 3%
+    critical: 0.10    # 10%
+ 
+hmm:
+  n_states: [2, 3, 4]
+  n_init: 10
+  covariance_type: "full"
+  features:
+    - abs_pct_deviation
+    - volatility_30d
+    - log_return
+ 
+kalman:
+  process_noise: 0.01
+  observation_noise: 0.1
+  em_iterations: 50
+ 
+output:
+  models_dir: "src/models"
+  logs_dir: "logs"
