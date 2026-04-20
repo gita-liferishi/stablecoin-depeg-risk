@@ -345,3 +345,71 @@ Computing rolling spillovers (window=200)...
 2026-03-27 20:43:54.272 | INFO     | __main__:main:228 - Contagion Analysis Complete
 2026-03-27 20:43:54.273 | INFO     | __main__:main:229 - ============================================================
 2026-03-27 20:43:54.273 | INFO     | __main__:main:230 - Results saved to: output\contagion
+2026-04-19 02:12:34.907 | INFO     | __main__:main:105 - ============================================================
+2026-04-19 02:12:34.908 | INFO     | __main__:main:106 - Contagion and Spillover Analysis
+2026-04-19 02:12:34.909 | INFO     | __main__:main:107 - ============================================================
+2026-04-19 02:12:35.741 | INFO     | __main__:main:119 - Loaded 11365 rows
+2026-04-19 02:12:35.782 | INFO     | __main__:main:123 - Returns panel: (30, 7)
+2026-04-19 02:12:35.783 | INFO     | src.analysis.contagion:analyze:426 - Running comprehensive contagion analysis
+2026-04-19 02:12:35.783 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 7 assets
+2026-04-19 02:12:35.795 | ERROR    | src.analysis.contagion:analyze:435 - Spillover analysis failed: Matrix is not positive definite
+2026-04-19 02:12:35.831 | INFO     | src.analysis.contagion:analyze:449 - Granger network: 0 significant causal links
+2026-04-19 02:12:35.844 | INFO     | src.analysis.contagion:analyze:459 - High correlation regime: 0.0% of time
+2026-04-19 02:12:35.844 | INFO     | __main__:main:143 - 
+============================================================
+2026-04-19 02:12:35.845 | INFO     | __main__:main:144 - Saving Results
+2026-04-19 02:12:35.845 | INFO     | __main__:main:145 - ============================================================
+2026-04-19 02:12:35.860 | INFO     | __main__:main:182 - 
+Granger Network: 0 significant links
+2026-04-19 02:12:35.860 | INFO     | __main__:main:183 - 
+Centrality (Out-degree = influence):
+2026-04-19 02:12:35.861 | INFO     | __main__:main:185 -   DAI: 0.000
+2026-04-19 02:12:35.862 | INFO     | __main__:main:185 -   FRAX: 0.000
+2026-04-19 02:12:35.862 | INFO     | __main__:main:185 -   UST: 0.000
+2026-04-19 02:12:35.863 | INFO     | __main__:main:185 -   LUSD: 0.000
+2026-04-19 02:12:35.864 | INFO     | __main__:main:185 -   MIM: 0.000
+2026-04-19 02:12:35.865 | INFO     | __main__:main:185 -   sUSD: 0.000
+2026-04-19 02:12:35.866 | INFO     | __main__:main:185 -   USDD: 0.000
+2026-04-19 02:12:35.882 | INFO     | __main__:main:193 - 
+High correlation regime: 0.0% of observations
+2026-04-19 02:12:35.883 | INFO     | __main__:main:204 - 
+Computing rolling spillovers (window=200)...
+2026-04-19 02:12:35.887 | INFO     | __main__:main:227 - 
+============================================================
+2026-04-19 02:12:35.887 | INFO     | __main__:main:228 - Contagion Analysis Complete
+2026-04-19 02:12:35.888 | INFO     | __main__:main:229 - ============================================================
+2026-04-19 02:12:35.888 | INFO     | __main__:main:230 - Results saved to: output\contagion
+2026-04-19 11:42:55.370 | INFO     | __main__:main:105 - ============================================================
+2026-04-19 11:42:55.374 | INFO     | __main__:main:106 - Contagion and Spillover Analysis
+2026-04-19 11:42:55.375 | INFO     | __main__:main:107 - ============================================================
+2026-04-19 11:42:56.633 | INFO     | __main__:main:119 - Loaded 11365 rows
+2026-04-19 11:42:56.740 | INFO     | __main__:main:123 - Returns panel: (30, 7)
+2026-04-19 11:42:56.741 | INFO     | src.analysis.contagion:analyze:426 - Running comprehensive contagion analysis
+2026-04-19 11:42:56.741 | INFO     | src.analysis.contagion:fit:83 - Computing spillovers for 7 assets
+2026-04-19 11:42:56.771 | ERROR    | src.analysis.contagion:analyze:435 - Spillover analysis failed: Matrix is not positive definite
+2026-04-19 11:42:56.885 | INFO     | src.analysis.contagion:analyze:449 - Granger network: 0 significant causal links
+2026-04-19 11:42:56.917 | INFO     | src.analysis.contagion:analyze:459 - High correlation regime: 0.0% of time
+2026-04-19 11:42:56.918 | INFO     | __main__:main:143 - 
+============================================================
+2026-04-19 11:42:56.919 | INFO     | __main__:main:144 - Saving Results
+2026-04-19 11:42:56.920 | INFO     | __main__:main:145 - ============================================================
+2026-04-19 11:42:56.949 | INFO     | __main__:main:182 - 
+Granger Network: 0 significant links
+2026-04-19 11:42:56.953 | INFO     | __main__:main:183 - 
+Centrality (Out-degree = influence):
+2026-04-19 11:42:56.954 | INFO     | __main__:main:185 -   DAI: 0.000
+2026-04-19 11:42:56.956 | INFO     | __main__:main:185 -   FRAX: 0.000
+2026-04-19 11:42:56.958 | INFO     | __main__:main:185 -   UST: 0.000
+2026-04-19 11:42:56.961 | INFO     | __main__:main:185 -   LUSD: 0.000
+2026-04-19 11:42:56.962 | INFO     | __main__:main:185 -   MIM: 0.000
+2026-04-19 11:42:56.963 | INFO     | __main__:main:185 -   sUSD: 0.000
+2026-04-19 11:42:56.964 | INFO     | __main__:main:185 -   USDD: 0.000
+2026-04-19 11:42:56.995 | INFO     | __main__:main:193 - 
+High correlation regime: 0.0% of observations
+2026-04-19 11:42:56.996 | INFO     | __main__:main:204 - 
+Computing rolling spillovers (window=200)...
+2026-04-19 11:42:57.002 | INFO     | __main__:main:227 - 
+============================================================
+2026-04-19 11:42:57.004 | INFO     | __main__:main:228 - Contagion Analysis Complete
+2026-04-19 11:42:57.005 | INFO     | __main__:main:229 - ============================================================
+2026-04-19 11:42:57.006 | INFO     | __main__:main:230 - Results saved to: output\contagion

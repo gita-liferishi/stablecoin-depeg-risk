@@ -65,3 +65,63 @@ volatility_kf:
 stochastic_volatility:
 2026-03-27 20:14:56.288 | INFO     | __main__:main:188 -   log_likelihood: -23188.7253
 2026-03-27 20:14:56.289 | INFO     | __main__:main:188 -   phi: 0.9480
+2026-04-19 01:57:35.536 | INFO     | __main__:main:64 - ============================================================
+2026-04-19 01:57:35.537 | INFO     | __main__:main:65 - Kalman Filter Training
+2026-04-19 01:57:35.537 | INFO     | __main__:main:66 - ============================================================
+2026-04-19 01:57:35.706 | INFO     | __main__:main:86 - 
+----------------------------------------
+2026-04-19 01:57:35.706 | INFO     | __main__:main:87 - 1. Local Level Model (Peg Deviation)
+2026-04-19 01:57:35.707 | INFO     | __main__:main:88 - ----------------------------------------
+2026-04-19 02:09:29.470 | INFO     | __main__:main:97 - Log-likelihood: 34586.57
+2026-04-19 02:09:29.488 | INFO     | __main__:main:98 - Observation noise: 0.000062
+2026-04-19 02:09:29.489 | INFO     | __main__:main:99 - Transition noise: 0.000131
+2026-04-19 02:09:29.891 | INFO     | __main__:main:117 - 
+----------------------------------------
+2026-04-19 02:09:29.892 | INFO     | __main__:main:118 - 2. Volatility Kalman Filter
+2026-04-19 02:09:29.892 | INFO     | __main__:main:119 - ----------------------------------------
+2026-04-19 02:09:29.898 | INFO     | src.models.kalman:fit:129 - Fitting Kalman Filter on 12570 observations
+2026-04-19 02:09:29.901 | INFO     | src.models.kalman:fit:136 - Running EM algorithm for 100 iterations
+2026-04-19 02:13:26.255 | INFO     | __main__:main:64 - ============================================================
+2026-04-19 02:13:26.256 | INFO     | __main__:main:65 - Kalman Filter Training
+2026-04-19 02:13:26.257 | INFO     | __main__:main:66 - ============================================================
+2026-04-19 02:13:26.662 | INFO     | __main__:main:86 - 
+----------------------------------------
+2026-04-19 02:13:26.665 | INFO     | __main__:main:87 - 1. Local Level Model (Peg Deviation)
+2026-04-19 02:13:26.665 | INFO     | __main__:main:88 - ----------------------------------------
+2026-04-19 02:29:15.895 | INFO     | __main__:main:97 - Log-likelihood: 30720.39
+2026-04-19 02:29:15.918 | INFO     | __main__:main:98 - Observation noise: 0.000069
+2026-04-19 02:29:15.919 | INFO     | __main__:main:99 - Transition noise: 0.000143
+2026-04-19 02:29:16.179 | INFO     | __main__:main:117 - 
+----------------------------------------
+2026-04-19 02:29:16.181 | INFO     | __main__:main:118 - 2. Volatility Kalman Filter
+2026-04-19 02:29:16.182 | INFO     | __main__:main:119 - ----------------------------------------
+2026-04-19 02:29:16.188 | INFO     | src.models.kalman:fit:129 - Fitting Kalman Filter on 11358 observations
+2026-04-19 02:29:16.192 | INFO     | src.models.kalman:fit:136 - Running EM algorithm for 100 iterations
+2026-04-19 02:44:22.058 | INFO     | src.models.kalman:fit:162 - Kalman Filter fitted. Log-likelihood: 27563.23
+2026-04-19 02:44:22.089 | INFO     | __main__:main:128 - Log-likelihood: 27563.23
+2026-04-19 02:44:22.091 | INFO     | __main__:main:129 - Transition coefficient: 0.9500
+2026-04-19 02:44:22.656 | INFO     | __main__:main:147 - 
+----------------------------------------
+2026-04-19 02:44:22.660 | INFO     | __main__:main:148 - 3. Stochastic Volatility Model
+2026-04-19 02:44:22.661 | INFO     | __main__:main:149 - ----------------------------------------
+2026-04-19 02:56:26.317 | INFO     | src.models.kalman:fit:382 - Stochastic Volatility model fitted. phi=0.946
+2026-04-19 02:56:33.530 | INFO     | __main__:main:161 - Log-likelihood: -26303.50
+2026-04-19 02:56:33.531 | INFO     | __main__:main:162 - Persistence (phi): 0.9459
+2026-04-19 02:56:33.799 | INFO     | __main__:main:181 - 
+============================================================
+2026-04-19 02:56:33.802 | INFO     | __main__:main:182 - Kalman Filter Training Complete
+2026-04-19 02:56:33.803 | INFO     | __main__:main:183 - ============================================================
+2026-04-19 02:56:33.804 | INFO     | __main__:main:186 - 
+local_level:
+2026-04-19 02:56:33.805 | INFO     | __main__:main:188 -   log_likelihood: 30720.3875
+2026-04-19 02:56:33.807 | INFO     | __main__:main:188 -   observation_noise: 0.0001
+2026-04-19 02:56:33.809 | INFO     | __main__:main:188 -   transition_noise: 0.0001
+2026-04-19 02:56:33.815 | INFO     | __main__:main:186 - 
+volatility_kf:
+2026-04-19 02:56:33.816 | INFO     | __main__:main:188 -   log_likelihood: 27563.2261
+2026-04-19 02:56:33.819 | INFO     | __main__:main:188 -   transition_coeff: 0.9500
+2026-04-19 02:56:33.821 | INFO     | __main__:main:188 -   observation_noise: 0.0003
+2026-04-19 02:56:33.822 | INFO     | __main__:main:186 - 
+stochastic_volatility:
+2026-04-19 02:56:33.823 | INFO     | __main__:main:188 -   log_likelihood: -26303.4972
+2026-04-19 02:56:33.824 | INFO     | __main__:main:188 -   phi: 0.9459

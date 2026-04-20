@@ -1,16 +1,16 @@
 {
   "local_level": {
-    "log_likelihood": 36438.87260152926,
-    "observation_noise": 2.440831691459564e-06,
-    "transition_noise": 4.078787355231537e-05
+    "log_likelihood": 30720.387532745808,
+    "observation_noise": 6.916318818701372e-05,
+    "transition_noise": 0.00014254314330529192
   },
   "volatility_kf": {
-    "log_likelihood": 23517.78898725679,
+    "log_likelihood": 27563.226111693162,
     "transition_coeff": 0.95,
-    "observation_noise": 0.00039390124636864087
+    "observation_noise": 0.00025059147542244944
   },
   "stochastic_volatility": {
-    "log_likelihood": -23188.725303483145,
-    "phi": 0.9480413318960355
+    "log_likelihood": -26303.497206899858,
+    "phi": 0.9458660584994435
   }
 }

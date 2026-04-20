@@ -478,11 +478,15 @@ class DataExtractor:
         
         # Define stablecoins and their possible CSV names
         stablecoins = {
-            "USDT": ["usdt_coinmarketcap.csv", "usdt.csv", "tether.csv", "USDT.csv"],
-            "USDC": ["usdc_coinmarketcap.csv", "usdc.csv", "usd-coin.csv", "USDC.csv"],
+            # "USDT": ["usdt_coinmarketcap.csv", "usdt.csv", "tether.csv", "USDT.csv"],
+            # "USDC": ["usdc_coinmarketcap.csv", "usdc.csv", "usd-coin.csv", "USDC.csv"],
             "DAI": ["dai_coinmarketcap.csv", "dai.csv", "DAI.csv"],
             "FRAX": ["frax_coinmarketcap.csv", "frax.csv", "FRAX.csv"],
             "UST": ["ust_coinmarketcap.csv", "ust.csv", "terrausd.csv", "UST.csv"],
+            "LUSD":["lusd_coinmarketcap.csv", "lusd.csv"],
+            "MIM":["mim_coinmarketcap.csv", "mim.csv"],
+            "sUSD":["susd_coinmarketcap.csv", "susd.csv"],
+            "USDD":["usdd_coinmarketcap.csv", "usdd.csv"]
         }
         
         dfs = []
@@ -589,7 +593,7 @@ class DataExtractor:
             pools = self.defillama.get_pools()
             
             # Filter for stablecoin pools
-            stablecoin_symbols = ["USDT", "USDC", "DAI", "FRAX", "UST"]
+            stablecoin_symbols = ["DAI", "FRAX", "UST", "LUSD", "MIM", "sUSD", "USDD"]
             pattern = "|".join(stablecoin_symbols)
             
             stablecoin_pools = pools[

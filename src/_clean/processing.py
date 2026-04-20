@@ -472,6 +472,31 @@ class DataProcessor:
         
         return train_df, val_df, test_df
     
+    def filter_dead_stablecoins(self, df: pd.DataFrame) -> pd.DataFrame:
+        df = df.copy()
+        
+        # Define collapse dates for dead stablecoins
+        collapse_dates = {
+            'UST': '2022-06-01',
+            'terrausd': '2022-06-01',
+            # Add others if needed (e.g., IRON)
+        }
+        
+        initial_len = len(df)
+        
+        for symbol, cutoff_date in collapse_dates.items():
+            # Check both 'symbol' and 'coin_id' columns
+            for col in ['symbol', 'coin_id']:
+                if col in df.columns:
+                    mask = (df[col] == symbol) & (df.index > cutoff_date)
+                    if mask.sum() > 0:
+                        logger.info(f"Filtering {mask.sum()} rows of {symbol} after {cutoff_date}")
+                        df = df[~mask]
+        
+        logger.info(f"Filtered {initial_len - len(df)} post-collapse rows")
+        
+        return df
+    
     def process_pipeline(self, df: pd.DataFrame) -> pd.DataFrame:
         """
         Run full processing pipeline.
@@ -486,7 +511,7 @@ class DataProcessor:
         
         # Clean data
         df = self.clean_price_data(df)
-        
+        df = self.filter_dead_stablecoins(df)
         # Compute features
         df = self.compute_deviation_features(df)
         df = self.compute_volatility_features(df)
